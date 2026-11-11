@@ -7,7 +7,7 @@ set -euo pipefail
 
 DOMAIN="${1:-wa.24aga.com.br}"
 DIR=/opt/24aga-wa
-IMAGE="atendai/evolution-api:v2.2.3"
+IMAGE="evoapicloud/evolution-api:v2.3.7"
 
 if [ "$(id -u)" != "0" ]; then echo "Rode como root (sudo -i)."; exit 1; fi
 echo "==> 24AGÁ · instalando servidor do WhatsApp em $DOMAIN"
