@@ -47,13 +47,12 @@ const PROFILES = {
   admin:{ get label(){ return DR() + ' · Administração'; }, staff:'grazi', desc:'Acesso gerencial completo da clínica', routes:['visao','agenda','atendimento','assistente','pacientes','propostas','servicos','automacoes','followup','relatorios','configuracoes'] },
   recepcao:{ label:'Camila · Recepção', staff:'camila', desc:'Agenda, atendimento, cadastros e agendamentos. Sem informações clínicas.', routes:['visao','agenda','atendimento','pacientes','servicos','automacoes','followup'] },
   profissional:{ get label(){ return PRO() + ' · Profissional'; }, staff:'paula', desc:'Agenda própria, pacientes autorizadas e propostas pertinentes', routes:['visao','agenda','pacientes','propostas','servicos'] },
-  plataforma:{ label:'Dono da plataforma 24AGÁ', staff:null, desc:'Clientes, planos, pagamentos e consumo. Nunca dados de pacientes.', routes:['licencas'] },
 };
 const ROUTES = {
   visao:{ t:'Visão geral', i:'home', g:'Clínica' }, agenda:{ t:'Agenda', i:'cal', g:'Clínica' }, atendimento:{ t:'Atendimento', i:'chat', g:'Clínica' },
   assistente:{ t:'Assistente de IA', i:'spark', g:'Clínica' }, pacientes:{ t:'Pacientes e funil', i:'users', g:'Clínica' }, propostas:{ t:'Propostas', i:'doc', g:'Clínica' },
   servicos:{ t:'Tratamentos', i:'heart', g:'Gestão' }, automacoes:{ t:'Lembretes e retornos', i:'bolt', g:'Gestão' }, followup:{ t:'Follow-up automático', i:'redo', g:'Gestão' }, relatorios:{ t:'Relatórios', i:'chart', g:'Gestão' },
-  configuracoes:{ t:'Configurações', i:'gear', g:'Gestão' }, licencas:{ t:'Clientes 24AGÁ', i:'building', g:'Plataforma 24AGÁ' },
+  configuracoes:{ t:'Configurações', i:'gear', g:'Gestão' },
 };
 
 const UI = {
@@ -164,13 +163,13 @@ function toast(text) {
 }
 
 /* ---------- Navegação ---------- */
-const HASH_TO = { site:['pitch'], proposta:['pitch'], planos:['pitch','planos'], investimento:['pitch','planos'], contato:['pitch','contato'], demonstracao:['demo','visao'], licencas:['demo','licencas'] };
+const HASH_TO = { site:['pitch'], proposta:['pitch'], planos:['pitch','planos'], investimento:['pitch','planos'], contato:['pitch','contato'], demonstracao:['demo','visao'] };
 Object.keys(ROUTES).forEach(r => { if (!HASH_TO[r]) HASH_TO[r] = ['demo', r]; });
 function setHash(h) { try { history.replaceState(null, '', '#' + h); } catch (e) {} }
 function goTo(route, sel) {
   if (route === 'pitch') { UI.mode = 'pitch'; render(); window.scrollTo(0,0); setHash('site'); return; }
   if (UI.mode !== 'demo') UI.mode = 'demo';
-  if (route === 'licencas' && UI.profile !== 'plataforma') { UI.profile = 'plataforma'; toast('Perfil alterado para Administrador da plataforma'); }
+  if (!ROUTES[route]) route = 'visao';
   if (route !== 'licencas' && UI.profile === 'plataforma') { UI.profile = 'admin'; }
   if (!prof().routes.includes(route)) { toast('Este perfil não tem acesso a ' + ROUTES[route].t); route = prof().routes[0]; }
   UI.route = route; UI.more = false; UI.drawer = null;
@@ -574,7 +573,7 @@ function boot() {
   const h = (location.hash || '').replace('#', '');
   const m = HASH_TO[h];
   if (m) {
-    if (m[0] === 'demo') { UI.loggedOnce = true; if (m[1] === 'licencas') UI.profile = 'plataforma'; UI.mode = 'demo'; UI.route = m[1]; }
+    if (m[0] === 'demo') { UI.loggedOnce = true; UI.mode = 'demo'; UI.route = m[1]; }
     render();
     if (m[0] === 'pitch' && m[1]) setTimeout(() => { const el = document.getElementById(m[1]); if (el) el.scrollIntoView(); }, 50);
   } else render();
