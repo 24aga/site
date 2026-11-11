@@ -544,12 +544,12 @@ const C = {
 const F = {
   lead: async f => {
     const msg = $('#ld-msg'); const btn = f.querySelector('button'); const v = id => ($(id) || {}).value || '';
-    const lead = { name:v('#ld-n').trim(), clinic:v('#ld-c').trim(), whatsapp:v('#ld-w').trim(), city:v('#ld-ci').trim(), niche:v('#ld-s'), plan:v('#ld-p'), consent:!!($('#ld-ok')||{}).checked, source:'site-24h' };
+    const lead = { name:v('#ld-n').trim(), clinic:v('#ld-c').trim(), whatsapp:v('#ld-w').trim(), city:v('#ld-ci').trim(), niche:v('#ld-s'), plan:v('#ld-p'), consent:!!($('#ld-ok')||{}).checked, source:'site-24h' + (typeof utmTag === 'function' && utmTag() ? ' | ' + utmTag() : '') };
     if (!lead.name || !lead.clinic || lead.whatsapp.replace(/\D/g,'').length < 10) { msg.textContent = 'Preencha nome, clínica e um WhatsApp com DDD.'; return; }
     btn.disabled = true; msg.textContent = 'Enviando…';
     const r = await saveLead(lead);
     btn.disabled = false;
-    if (r.ok) px('Lead', { content_name: lead.niche, content_category: lead.plan });
+    if (r.ok && typeof pxLead === 'function') pxLead(lead);
     if (r.ok && r.viaWhats) { window.open(`https://wa.me/${CFG.WHATSAPP}?text=${encodeURIComponent(`Olá! Sou ${lead.name}, da ${lead.clinic} (${lead.city || 'cidade não informada'}). Quero conhecer a 24AGÁ, plano ${lead.plan}.`)}`, '_blank', 'noopener'); msg.textContent = 'Abrindo o WhatsApp da equipe ROITY Academy…'; }
     else if (r.ok) { f.reset(); msg.innerHTML = 'Recebido! A equipe ROITY Academy vai chamar você no WhatsApp.' + (CFG.WHATSAPP ? ` <a href="https://wa.me/${CFG.WHATSAPP}?text=${encodeURIComponent('Olá! Quero conhecer a 24AGÁ para a ' + lead.clinic + '.')}" target="_blank" rel="noopener">Ou fale agora pelo WhatsApp.</a>` : ''); }
     else if (r.notConfigured) msg.textContent = 'Demonstração: o envio de verdade é ligado quando o banco de dados da 24AGÁ estiver configurado.';
