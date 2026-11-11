@@ -545,7 +545,7 @@ const C = {
 const F = {
   lead: async f => {
     const msg = $('#ld-msg'); const btn = f.querySelector('button'); const v = id => ($(id) || {}).value || '';
-    const lead = { name:v('#ld-n').trim(), clinic:v('#ld-c').trim(), whatsapp:v('#ld-w').trim(), city:v('#ld-ci').trim(), niche:v('#ld-s'), plan:v('#ld-p'), consent:!!($('#ld-ok')||{}).checked, source:'site-24h' + (typeof utmTag === 'function' && utmTag() ? ' | ' + utmTag() : '') };
+    const lead = { name:v('#ld-n').trim(), clinic:v('#ld-c').trim(), whatsapp:v('#ld-w').trim(), city:v('#ld-ci').trim(), niche:v('#ld-s'), plan:v('#ld-p'), consent:!!($('#ld-ok')||{}).checked, source:('site' + (typeof utmTag === 'function' && utmTag() ? '|' + utmTag() : '')).slice(0, 40) };
     if (!lead.name || !lead.clinic || lead.whatsapp.replace(/\D/g,'').length < 10) { msg.textContent = 'Preencha nome, clínica e um WhatsApp com DDD.'; return; }
     btn.disabled = true; msg.textContent = 'Enviando…';
     const r = await saveLead(lead);
