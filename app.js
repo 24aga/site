@@ -380,7 +380,7 @@ function pitchView() {
       </form>
     </div></section>
     <footer class="p-foot"><div class="wrap ft">
-      <div>${logo24('sm', true)}<p>24AGÁ · Seu negócio nunca para. Uma plataforma da ROITY Academy. As clínicas, pessoas e conversas da demonstração são fictícias.</p><p class="p-legal"><a href="privacidade.html">Política de Privacidade</a> · <a href="https://wa.me/5566999087424" target="_blank" rel="noopener">Contato</a></p></div>
+      <div>${logo24('sm', true)}<p>24AGÁ · Seu negócio nunca para. Uma plataforma da ROITY Academy. As clínicas, pessoas e conversas da demonstração são fictícias.</p><p class="p-legal"><a href="privacidade.html">Política de Privacidade</a> · <a href="https://wa.me/5566999087424" target="_blank" rel="noopener">Contato</a><br>ROITY BUSINESS SOLUTIONS LTDA · CNPJ 53.472.596/0001-99 · Juara, MT</p></div>
       <img class="ra" src="roity-academy.png" alt="ROITY Academy">
     </div></footer>
   </div>`;
