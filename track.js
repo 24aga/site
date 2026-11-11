@@ -69,3 +69,20 @@ function pxLead(lead) {
   px('Lead', { content_name: p.name || lead.plan, content_category: lead.niche, value: p.price || 0, currency: 'BRL' }, false, { eventID });
   return eventID;
 }
+
+// Aviso de cookies: aparece uma vez, some ao clicar em Aceitar
+(function () {
+  let ok = false; try { ok = localStorage.getItem('24h.cookies') === 'ok'; } catch (e) {}
+  if (ok) return;
+  const show = () => {
+    if (document.getElementById('ck24')) return;
+    const st = document.createElement('style');
+    st.textContent = '#ck24{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:75;max-width:420px;background:#05070D;color:#EEF2FA;border:1px solid #1C2438;border-radius:14px;padding:14px 16px;display:flex;gap:14px;align-items:center;box-shadow:0 16px 40px rgba(0,0,0,.35);font:14px/1.45 Inter,system-ui,sans-serif}#ck24 a{color:#8FB0FF}#ck24 button{flex:none;background:#1F5BFF;color:#fff;border:0;border-radius:10px;padding:10px 18px;font:600 14px Inter,system-ui,sans-serif;cursor:pointer}@media (max-width:980px){#ck24{left:12px;right:12px;max-width:none}body:has(#ck24) .waf{display:none}body[data-mode="demo"] #ck24{bottom:calc(80px + env(safe-area-inset-bottom,0px))}}@media print{#ck24{display:none}}';
+    document.head.appendChild(st);
+    const d = document.createElement('div'); d.id = 'ck24'; d.setAttribute('role', 'region'); d.setAttribute('aria-label', 'Aviso de cookies');
+    d.innerHTML = '<span>Usamos cookies para melhorar sua experiência e medir nossos anúncios. Saiba mais na <a href="privacidade.html">Política de Privacidade</a>.</span><button type="button">Aceitar</button>';
+    d.querySelector('button').onclick = () => { try { localStorage.setItem('24h.cookies', 'ok'); } catch (e) {} d.remove(); };
+    document.body.appendChild(d);
+  };
+  if (document.body) show(); else document.addEventListener('DOMContentLoaded', show);
+})();
