@@ -9,6 +9,15 @@ const once = (k, fn) => { if (pxOnce[k]) return; pxOnce[k] = true; fn(); };
 const nicheNow = () => { try { return currentNiche(); } catch (e) { return ''; } };
 const planInfo = k => { try { return PLANS24.find(p => p.k === k) || {}; } catch (e) { return {}; } };
 
+// Link do anúncio com ?nicho=estetica|odonto|medico|bemestar abre o site já nesse segmento
+(function () {
+  try {
+    const n = (new URLSearchParams(location.search).get('nicho') || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z]/g, '');
+    const map = { estetica:'estetica', odonto:'odonto', odontologia:'odonto', medico:'medico', medicos:'medico', medicina:'medico', bemestar:'bemestar', saude:'bemestar' };
+    if (map[n]) localStorage.setItem('24h.niche', map[n]);
+  } catch (e) {}
+})();
+
 // Origem do visitante (UTM / clique do anúncio), guardada para ir junto com o lead
 (function () {
   try {
