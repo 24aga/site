@@ -506,6 +506,7 @@ function render() {
   else if (UI.mode === 'login') root.innerHTML = loginView();
   else root.innerHTML = shell(VIEWS[UI.route] ? VIEWS[UI.route]() : '') + drawerView() + tourView();
   renderModal();
+  if (UI.mode === 'demo' && typeof pxDemo === 'function') pxDemo(UI.route);
   if (UI.mode === 'demo' && AFTER[UI.route]) AFTER[UI.route]();
 }
 
@@ -548,6 +549,7 @@ const F = {
     btn.disabled = true; msg.textContent = 'Enviando…';
     const r = await saveLead(lead);
     btn.disabled = false;
+    if (r.ok) px('Lead', { content_name: lead.niche, content_category: lead.plan });
     if (r.ok && r.viaWhats) { window.open(`https://wa.me/${CFG.WHATSAPP}?text=${encodeURIComponent(`Olá! Sou ${lead.name}, da ${lead.clinic} (${lead.city || 'cidade não informada'}). Quero conhecer a 24AGÁ, plano ${lead.plan}.`)}`, '_blank', 'noopener'); msg.textContent = 'Abrindo o WhatsApp da equipe ROITY Academy…'; }
     else if (r.ok) { f.reset(); msg.innerHTML = 'Recebido! A equipe ROITY Academy vai chamar você no WhatsApp.' + (CFG.WHATSAPP ? ` <a href="https://wa.me/${CFG.WHATSAPP}?text=${encodeURIComponent('Olá! Quero conhecer a 24AGÁ para a ' + lead.clinic + '.')}" target="_blank" rel="noopener">Ou fale agora pelo WhatsApp.</a>` : ''); }
     else if (r.notConfigured) msg.textContent = 'Demonstração: o envio de verdade é ligado quando o banco de dados da 24AGÁ estiver configurado.';
