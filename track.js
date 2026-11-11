@@ -25,7 +25,7 @@ function utmTag() {
 document.addEventListener('click', e => {
   const t = e.target.closest ? e.target : null; if (!t) return;
   const wa = t.closest('a[href*="wa.me"]');
-  if (wa) return px('Contact', { content_name: wa.closest('.exit24') ? 'popup-saida' : 'whatsapp', content_category: nicheNow() });
+  if (wa) return px('Contact', { content_name: wa.closest('.exit24') ? 'popup-saida' : wa.id === 'wa-float' ? 'botao-flutuante' : 'whatsapp', content_category: nicheNow() });
   const b = t.closest('[data-a]'); if (!b) return;
   const a = b.dataset.a;
   if (a === 'choosePlan') { const p = planInfo(b.dataset.k); px('InitiateCheckout', { content_name: p.name || b.dataset.k, value: p.price || 0, currency: 'BRL', content_category: nicheNow() }); }

@@ -505,6 +505,7 @@ function render() {
   if (UI.mode === 'pitch') root.innerHTML = pitchView();
   else if (UI.mode === 'login') root.innerHTML = loginView();
   else root.innerHTML = shell(VIEWS[UI.route] ? VIEWS[UI.route]() : '') + drawerView() + tourView();
+  updWaFloat();
   renderModal();
   if (UI.mode === 'demo' && typeof pxDemo === 'function') pxDemo(UI.route);
   if (UI.mode === 'demo' && AFTER[UI.route]) AFTER[UI.route]();
@@ -579,4 +580,15 @@ function boot() {
     render();
     if (m[0] === 'pitch' && m[1]) setTimeout(() => { const el = document.getElementById(m[1]); if (el) el.scrollIntoView(); }, 50);
   } else render();
+}
+
+// Botão flutuante de WhatsApp: mensagem muda conforme o visitante está no site ou na demonstração
+function updWaFloat() {
+  const a = document.getElementById('wa-float'); if (!a) return;
+  document.body.dataset.mode = UI.mode;
+  const nl = (NICHES[currentNiche()] || {}).label || '';
+  const txt = UI.mode === 'pitch'
+    ? 'Olá! Vim pelo site da 24AGÁ e quero agendar uma reunião demonstrativa.'
+    : `Olá! Estou vendo a demonstração da 24AGÁ${nl ? ' (' + nl + ')' : ''} e quero agendar uma reunião demonstrativa.`;
+  a.href = waLink(txt);
 }
