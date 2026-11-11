@@ -796,3 +796,5 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:640px}
 @media (max-width:980px){body[data-mode="demo"] .waf{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
 body:has(.tour) .waf,body:has(.overlay) .waf,body:has(.drawer) .waf{display:none}
 @media print{.waf{display:none}}
+.p-legal{margin-top:8px;font-size:13px}.p-legal a{color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:.85}
+.consent a{color:inherit;text-decoration:underline}

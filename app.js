@@ -374,13 +374,13 @@ function pitchView() {
         <div class="field"><label for="ld-ci">Cidade</label><input class="input" id="ld-ci" autocomplete="address-level2"></div></div>
         <div class="grid2"><div class="field"><label for="ld-s">Segmento</label><select class="input" id="ld-s">${NICHE_KEYS.map(k => `<option value="${k}" ${k===nk?'selected':''}>${esc(NICHES[k].label)}</option>`).join('')}</select></div>
         <div class="field"><label for="ld-p">Plano de interesse</label><select class="input" id="ld-p">${PLANS24.map(p => `<option value="${p.k}" ${UI.plan===p.k?'selected':''}>${p.name} · ${money0(p.price)}/mês</option>`).join('')}<option value="indefinido">Ainda não sei</option></select></div></div>
-        <label class="consent"><input type="checkbox" id="ld-ok" required> Autorizo a ROITY Academy a me chamar no WhatsApp sobre a 24AGÁ.</label>
+        <label class="consent"><input type="checkbox" id="ld-ok" required> Autorizo a ROITY Academy a me chamar no WhatsApp sobre a 24AGÁ e li a <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</label>
         <button class="btn primary caps wide">Quero a 24AGÁ na minha clínica</button>
         <p class="muted-b xs" id="ld-msg" aria-live="polite"></p>
       </form>
     </div></section>
     <footer class="p-foot"><div class="wrap ft">
-      <div>${logo24('sm', true)}<p>24AGÁ · Seu negócio nunca para. Uma plataforma da ROITY Academy. As clínicas, pessoas e conversas da demonstração são fictícias.</p></div>
+      <div>${logo24('sm', true)}<p>24AGÁ · Seu negócio nunca para. Uma plataforma da ROITY Academy. As clínicas, pessoas e conversas da demonstração são fictícias.</p><p class="p-legal"><a href="privacidade.html">Política de Privacidade</a> · <a href="https://wa.me/5566999087424" target="_blank" rel="noopener">Contato</a></p></div>
       <img class="ra" src="roity-academy.png" alt="ROITY Academy">
     </div></footer>
   </div>`;
