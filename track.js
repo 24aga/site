@@ -18,6 +18,15 @@ const planInfo = k => { try { return PLANS24.find(p => p.k === k) || {}; } catch
   } catch (e) {}
 })();
 
+// Link de parceiro: 24aga.com.br/?parceiro=CODIGO (fica guardado por 90 dias)
+(function () {
+  try {
+    const c = (new URLSearchParams(location.search).get('parceiro') || '').trim().toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 30);
+    if (c) { localStorage.setItem('24h.parceiro', c); localStorage.setItem('24h.parceiro.at', String(Date.now())); }
+    else if (Date.now() - Number(localStorage.getItem('24h.parceiro.at') || 0) > 90 * 864e5) localStorage.removeItem('24h.parceiro');
+  } catch (e) {}
+})();
+
 // Origem do visitante (UTM / clique do anúncio), guardada para ir junto com o lead
 (function () {
   try {

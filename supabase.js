@@ -10,7 +10,14 @@ async function sbInsert(table, row) {
   return { ok:r.ok, status:r.status };
 }
 async function saveLead(lead) {
-  if (sbOn()) { try { return await sbInsert('leads', lead); } catch (e) { return { ok:false }; } }
+  // veio pelo link de um parceiro (24aga.com.br/?parceiro=CODIGO): o contato fica marcado para ele
+  let pc = ''; try { pc = localStorage.getItem('24h.parceiro') || ''; } catch (e) {}
+  if (sbOn()) {
+    try {
+      if (pc) { const r = await sbInsert('leads', Object.assign({}, lead, { partner_code: pc })); if (r.ok) return r; }
+      return await sbInsert('leads', lead);
+    } catch (e) { return { ok:false }; }
+  }
   if (CFG.WHATSAPP) return { ok:true, viaWhats:true };
   return { ok:false, notConfigured:true };
 }
