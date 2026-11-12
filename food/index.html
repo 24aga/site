@@ -256,5 +256,18 @@ fat.oninput = calc; com.oninput = calc; setTier(0);
 fbq('init', '1773671088100425'); fbq('track', 'PageView'); fbq('track', 'ViewContent', { content_name:'pagina-food' });
 document.addEventListener('click', e => { const a = e.target.closest('[data-ev]'); if (!a) return; const ev = a.dataset.ev; fbq(ev.startsWith('plan-') && ev !== 'plan-gratis' ? 'track' : 'trackCustom', ev.startsWith('plan-') && ev !== 'plan-gratis' ? 'Contact' : 'CliqueCriarGratis', { content_name: ev }); }, true);
 </script>
+<script>
+// link de parceiro (24aga.com.br/food/?parceiro=CODIGO): o cadastro do restaurante fica marcado para ele
+(function () {
+  try {
+    const q = (new URLSearchParams(location.search).get('parceiro') || '').trim().toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 30);
+    if (q) { localStorage.setItem('24h.parceiro', q); localStorage.setItem('24h.parceiro.at', String(Date.now())); }
+    const c = q || localStorage.getItem('24h.parceiro') || '';
+    if (!c) return;
+    const fix = () => document.querySelectorAll('a[href^="https://app.24aga.com.br/criar.html"]').forEach(a => { const u = new URL(a.href); u.searchParams.set('parceiro', c); a.href = u.toString(); });
+    fix(); document.addEventListener('click', fix, true);
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>
