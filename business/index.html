@@ -108,6 +108,9 @@ footer a{color:var(--muted)}
 .waf{position:fixed;right:16px;bottom:16px;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.25);z-index:30}
 .waf svg{width:28px;height:28px;fill:#fff}
 @media (max-width:900px){.hero .in{grid-template-columns:1fr}.phone{transform:none;margin-top:10px}.grid3,.steps,.plans{grid-template-columns:1fr}.band{grid-template-columns:1fr 1fr}nav .hide{display:none}}
+.cta-in{display:flex;flex-direction:column;align-items:center;gap:8px;margin:28px auto 0;text-align:center}.cta-in span{font-size:13px;color:var(--muted)}
+.trialbar{display:none}
+@media (max-width:900px){.trialbar{display:flex;position:fixed;left:12px;right:84px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:40;justify-content:center;align-items:center;background:var(--acc);color:#fff;font-weight:800;font-size:15px;border-radius:14px;padding:14px 12px;text-decoration:none;box-shadow:0 10px 30px rgba(124,58,237,.45)}}
 </style>
 </head>
 <body>
@@ -134,14 +137,18 @@ footer a{color:var(--muted)}
 
 <section><div class="in center"><span class="k">Para quem é</span><h2>Qualquer empresa que atende pelo WhatsApp</h2>
   <p class="sub">Se o seu cliente chama no WhatsApp para perguntar preço, horário, disponibilidade ou fazer pedido, a 24AGÁ Business resolve.</p>
-  <div class="segs"><span>🛍️ Lojas e e-commerce</span><span>🏠 Imobiliárias</span><span>🔧 Oficinas e autopeças</span><span>💪 Academias e estúdios</span><span>💇 Salões e barbearias</span><span>🎓 Escolas e cursos</span><span>⚖️ Escritórios (advocacia, contabilidade)</span><span>🐾 Pet shops e veterinárias</span><span>🧰 Prestadores de serviço</span><span>🚗 Concessionárias e locadoras</span><span>🏨 Hotéis e pousadas</span><span>📦 Distribuidoras</span></div></div></section>
+  <div class="segs"><span>🛍️ Lojas e e-commerce</span><span>🏠 Imobiliárias</span><span>🔧 Oficinas e autopeças</span><span>💪 Academias e estúdios</span><span>💇 Salões e barbearias</span><span>🎓 Escolas e cursos</span><span>⚖️ Escritórios (advocacia, contabilidade)</span><span>🐾 Pet shops e veterinárias</span><span>🧰 Prestadores de serviço</span><span>🚗 Concessionárias e locadoras</span><span>🏨 Hotéis e pousadas</span><span>📦 Distribuidoras</span></div>
+  <div class="cta-in"><a class="btn pri" href="https://app.24aga.com.br/teste.html?tipo=loja" data-ev="cta-paraquem">🚀 Testar grátis na minha empresa</a><span>Sem cartão · a IA responde até 100 mensagens grátis</span></div>
+</div></section>
 
 <section style="padding-top:0"><div class="in"><div class="center"><span class="k">O problema</span><h2>Cada mensagem sem resposta é um cliente indo para o concorrente</h2></div>
   <div class="grid3">
     <div class="box"><div class="em">⏰</div><b>Demora para responder</b><p>O cliente pergunta e espera. Se demorar 10 minutos, ele já chamou outra empresa. À noite e no fim de semana, ninguém responde.</p></div>
     <div class="box"><div class="em">🔁</div><b>Equipe presa no repetitivo</b><p>Preço, horário, endereço, "ainda tem?": as mesmas perguntas o dia inteiro, enquanto o trabalho importante fica para depois.</p></div>
     <div class="box"><div class="em">👻</div><b>Cliente que some e não volta</b><p>Pediu orçamento e não fechou? Comprou uma vez e sumiu? Sem ninguém para chamar de volta, essa venda se perde.</p></div>
-  </div></div></section>
+  </div>
+  <div class="cta-in"><a class="btn pri" href="https://app.24aga.com.br/teste.html?tipo=loja" data-ev="cta-problema">🚀 Parar de perder clientes · teste grátis</a><span>Sem cartão · a IA responde até 100 mensagens grátis</span></div>
+</div></section>
 
 <section style="padding-top:0"><div class="in"><div class="center"><span class="k">O que ela faz</span><h2>Uma secretária que não falta, não cansa e não esquece</h2></div>
   <div class="grid3">
@@ -151,7 +158,9 @@ footer a{color:var(--muted)}
     <div class="box"><div class="em">🔁</div><b>Chama de volta quem sumiu</b><p>Follow-up automático de quem não fechou, carrinho abandonado e clientes antigos que não compram há meses.</p></div>
     <div class="box"><div class="em">🙋</div><b>Passa para a equipe na hora certa</b><p>Reclamação, negociação ou assunto delicado: ela avisa sua equipe no celular e para de responder aquela conversa.</p></div>
     <div class="box"><div class="em">📊</div><b>Mostra quanto rendeu</b><p>Painel com conversas, vendas e agendamentos gerados pela IA em reais, de onde vêm os clientes e resumo toda segunda no seu WhatsApp.</p></div>
-  </div></div></section>
+  </div>
+  <div class="cta-in"><a class="btn pri" href="https://app.24aga.com.br/teste.html?tipo=loja" data-ev="cta-recursos">🚀 Quero essa secretária na minha empresa · grátis</a><span>Sem cartão · a IA responde até 100 mensagens grátis</span></div>
+</div></section>
 
 <section style="padding-top:0"><div class="in"><div class="band">
   <div><b>24h</b><span>atendendo todo dia, inclusive feriados</span></div>
@@ -164,7 +173,9 @@ footer a{color:var(--muted)}
     <div class="step"><div class="em">📲</div><b>Conecta seu WhatsApp</b><p>Você lê um QR Code com o celular da empresa. O WhatsApp continua funcionando normal no seu celular.</p></div>
     <div class="step"><div class="em">🧠</div><b>A IA aprende sua empresa</b><p>Serviços, produtos (até pelo link do site), preços, horários e regras. Você aprova tudo o que ela pode dizer.</p></div>
     <div class="step"><div class="em">🚀</div><b>Ela começa a atender</b><p>Você acompanha tudo pelo painel e pelo celular, e assume qualquer conversa quando quiser.</p></div>
-  </div></div></section>
+  </div>
+  <div class="cta-in"><a class="btn pri" href="https://app.24aga.com.br/teste.html?tipo=loja" data-ev="cta-como">🚀 Conectar meu WhatsApp e testar grátis</a><span>Sem cartão · a IA responde até 100 mensagens grátis</span></div>
+</div></section>
 
 <section id="planos" style="padding-top:0"><div class="in"><div class="center"><span class="k">Planos</span><h2>Menos que um funcionário. Trabalha 24 horas.</h2><p class="sub">Uma ou duas vendas a mais por mês já pagam a mensalidade. E o painel mostra o retorno em reais.</p></div>
   <div class="plans">
@@ -183,12 +194,15 @@ footer a{color:var(--muted)}
     <details><summary>Ela entende áudio?</summary><p>Sim. Ela ouve os áudios dos clientes e responde por texto.</p></details>
     <details><summary>Serve para o meu tipo de empresa?</summary><p>Se os seus clientes chamam no WhatsApp para perguntar, agendar, orçar ou comprar, serve. No teste grátis você vê funcionando com a sua empresa.</p></details>
     <details><summary>Tem fidelidade?</summary><p>Os planos têm período mínimo informado no contrato. O teste grátis não tem compromisso nenhum.</p></details>
-  </div></div></section>
+  </div>
+  <div class="cta-in"><a class="btn pri" href="https://app.24aga.com.br/teste.html?tipo=loja" data-ev="cta-duvidas">🚀 Ainda com dúvida? Teste grátis, sem cartão</a><span>Sem cartão · a IA responde até 100 mensagens grátis</span></div>
+</div></section>
 
 <section style="padding-top:0"><div class="in"><div class="final"><h2>Sua empresa atendendo e vendendo 24 horas.</h2><p class="sub" style="color:#DDD6EE;margin:0 auto 22px">Comece o teste grátis agora. Leva 2 minutos.</p>
   <a class="btn pri" href="https://app.24aga.com.br/teste.html?tipo=loja" data-ev="cta-final">Começar teste grátis →</a></div></div></section>
 
 <footer>24AGÁ Business · A secretária com IA da sua empresa · <a href="/">24AGÁ Clinic</a> · <a href="/food/">24AGÁ Food</a><br>ROITY BUSINESS SOLUTIONS LTDA · CNPJ 53.472.596/0001-99 · <a href="/privacidade.html">Política de Privacidade</a> · <a href="/termos.html">Termos de Uso</a></footer>
+<a class="trialbar" href="https://app.24aga.com.br/teste.html?tipo=loja" data-ev="cta-barra-fixa">🚀 Testar grátis na minha empresa</a>
 <a class="waf" href="https://wa.me/5566999087424?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20do%2024AG%C3%81%20Business." target="_blank" rel="noopener" aria-label="Falar no WhatsApp" data-ev="wa-float"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
 <script>
 // cada botão leva junto qual foi clicado (origem) para você saber o interesse

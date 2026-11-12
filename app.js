@@ -223,8 +223,9 @@ function pitchView() {
     <header class="p-top"><div class="wrap">
       <button class="lg-btn" data-a="scrollTo" data-t="topo" aria-label="Início">${logo24('', true)}</button>
       <nav><a href="#como" data-a="scrollTo" data-t="como">Como funciona</a><a href="#followup" data-a="scrollTo" data-t="followup">Follow-up</a><a href="#nichos" data-a="scrollTo" data-t="nichos">Para quem</a><a href="/food/">Restaurantes</a><a href="/business/">Empresas</a><a href="#planos" data-a="scrollTo" data-t="planos">Planos</a><a href="#duvidas" data-a="scrollTo" data-t="duvidas">Dúvidas</a></nav>
-      <button class="btn primary sm" data-a="go" data-r="visao">Ver demonstração ${ic('arrow')}</button>
+      <div class="row" style="gap:8px;flex-wrap:nowrap"><button class="btn sm hide-sm" data-a="go" data-r="visao">Ver demonstração</button><a class="btn primary sm" href="https://app.24aga.com.br/teste.html" data-trial="topo-menu">Testar grátis ${ic('arrow')}</a></div>
     </div></header>
+    <a class="trialbar" href="https://app.24aga.com.br/teste.html" data-trial="barra-fixa">🚀 Testar grátis no meu WhatsApp</a>
 
     <section class="hero" id="topo"><div class="wrap hero-grid">
       <div>
@@ -263,6 +264,7 @@ function pitchView() {
         ${['Mensagens chegando à noite e no fim de semana','As mesmas perguntas de preço e horário o dia todo','Recepção sobrecarregada e paciente esperando','Quem pediu informação e não agendou fica esquecido','Faltas por falta de lembrete','Nenhum número claro de quantos contatos viraram consulta']
           .map(t => `<div>${ic('clock')}<span>${t}</span></div>`).join('')}
       </div>
+      <div class="cta24"><a class="btn primary caps" href="https://app.24aga.com.br/teste.html" data-trial="desafio">🚀 Resolver isso na minha clínica · teste grátis</a><span>Sem cartão · a IA responde até 100 mensagens grátis</span></div>
     </div></section>
 
     <section class="band" id="como"><div class="wrap">
@@ -277,6 +279,7 @@ function pitchView() {
       </div>
       <div class="note dark-note">Assuntos de saúde, reações, fotos, doses e diagnósticos <b>nunca</b> são respondidos pela IA: ela passa na hora para a equipe, com prioridade. A 24AGÁ organiza e encaminha; a conduta é sempre do profissional.</div>
       <div class="row" style="margin-top:18px"><button class="btn primary" data-a="go" data-r="assistente">${ic('play')} Ver a simulação completa</button><button class="btn ghost-l" data-a="startTour">Tour de 6 minutos</button></div>
+      <div class="cta24"><a class="btn primary caps" href="https://app.24aga.com.br/teste.html" data-trial="como">🚀 Ver funcionando no meu WhatsApp · grátis</a><span>Sem cartão · a IA responde até 100 mensagens grátis</span></div>
     </div></section>
 
     <section class="band" id="followup"><div class="wrap">
@@ -291,6 +294,7 @@ function pitchView() {
       </div>
       <div class="hyp" style="margin-top:22px">${['Etapas e textos que você escolhe: minutos, horas ou dias','Não envia à noite nem em dia fechado: espera a abertura','Para quando o paciente responde, agenda ou pede PARAR','Começa sozinho: conversa parada, sem agendamento, proposta sem resposta ou falta','IA personaliza com o serviço de interesse do paciente','Nunca faz follow-up de assunto de saúde'].map(t => `<div>${ic('check')}<span>${t}</span></div>`).join('')}</div>
       <div class="row" style="margin-top:20px"><button class="btn primary" data-a="go" data-r="followup">${ic('play')} Ver o follow-up funcionando</button></div>
+      <div class="cta24"><a class="btn primary caps" href="https://app.24aga.com.br/teste.html" data-trial="followup">🚀 Quero esse follow-up na minha clínica · testar grátis</a><span>Sem cartão · a IA responde até 100 mensagens grátis</span></div>
     </div></section>
 
     <section class="band ivory" id="nichos"><div class="wrap">
@@ -306,6 +310,7 @@ function pitchView() {
           <div class="row" style="margin-top:14px"><button class="btn primary" data-a="go" data-r="visao">Abrir a demonstração de ${esc(n.short)}</button><button class="btn" data-a="go" data-r="assistente">Conversar com a IA</button></div></div>
         <div class="mini-chat">${n.incoming.slice(0,3).map(([q]) => `<div class="bb in">${esc(q)}</div>`).join('')}<div class="bb out">Respondo na hora, ofereço horários e chamo a equipe quando é assunto de saúde.</div></div>
       </div>
+      <div class="cta24"><a class="btn primary caps" href="https://app.24aga.com.br/teste.html" data-trial="nichos">🚀 Testar grátis com a minha especialidade</a><span>Sem cartão · a IA responde até 100 mensagens grátis</span></div>
     </div></section>
 
     <section class="band light" id="solucao"><div class="wrap">
@@ -313,6 +318,7 @@ function pitchView() {
       <h2>Atendimento, agenda, funil e propostas na mesma plataforma.</h2>
       <p class="lead">Toque em um cartão para ver a tela na demonstração.</p>
       <div class="sol">${sol.map(([i,t,d,r]) => `<button data-a="go" data-r="${r}">${ic(i)}<h4>${t}</h4><p>${d}</p><span class="go">Ver na demonstração ${ic('arrow')}</span></button>`).join('')}</div>
+      <div class="cta24"><a class="btn primary caps" href="https://app.24aga.com.br/teste.html" data-trial="solucao">🚀 Começar meu teste grátis</a><span>Sem cartão · a IA responde até 100 mensagens grátis</span></div>
     </div></section>
 
     <section class="band light" id="planos"><div class="wrap">
@@ -343,12 +349,14 @@ function pitchView() {
           .map(([a,b,c]) => `<tr><td>${a}</td><td>${b}</td><td class="us">${c}</td></tr>`).join('')}
       </tbody></table></div>
       <p class="muted-b">A 24AGÁ não substitui a sua equipe: faz o atendimento inicial e a organização, para que as pessoas cuidem do que precisa de gente.</p>
+      <div class="cta24"><a class="btn primary caps" href="https://app.24aga.com.br/teste.html" data-trial="comparar">🚀 Comparou? Teste grátis, sem cartão</a><span>Sem cartão · a IA responde até 100 mensagens grátis</span></div>
     </div></section>
 
     <section class="band light" id="seguranca"><div class="wrap">
       <span class="eyebrow">Segurança e LGPD</span>
       <h2>Dados de saúde tratados com o cuidado que exigem.</h2>
       <div class="hyp">${['Cada clínica com os dados separados e acesso só com login','Servidores com dados no Brasil e cópia de segurança diária','WhatsApp oficial da Meta: sem risco de bloqueio por ferramenta pirata','A IA não recebe informações clínicas e não dá diagnóstico','Contrato com cláusula de proteção de dados (LGPD)','Textos da IA sem promessa de resultado, dentro das regras dos conselhos'].map(t => `<div>${ic('shield')}<span>${t}</span></div>`).join('')}</div>
+      <div class="cta24"><a class="btn primary caps" href="https://app.24aga.com.br/teste.html" data-trial="seguranca">🚀 Testar com segurança · grátis</a><span>Sem cartão · a IA responde até 100 mensagens grátis</span></div>
     </div></section>
 
     <section class="band" id="duvidas"><div class="wrap narrow">
@@ -363,6 +371,7 @@ function pitchView() {
         ['Funciona no celular?','Sim. Agenda, aprovações e conversas funcionam no celular e no computador, sem precisar baixar nada na loja.'],
         ['Tem fidelidade?','O contrato mínimo é de 6 meses. Depois disso, você pode cancelar quando quiser.'],
       ].map(([q,a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join('')}</div>
+      <div class="cta24"><a class="btn primary caps" href="https://app.24aga.com.br/teste.html" data-trial="duvidas">🚀 Ainda com dúvida? Teste grátis, sem cartão</a><span>Sem cartão · a IA responde até 100 mensagens grátis</span></div>
     </div></section>
 
     <section class="band close" id="contato"><div class="wrap">
@@ -394,8 +403,10 @@ function exitModal() {
   openModal(`<div class="exit24">
     <button class="x-btn" data-a="closeModal" aria-label="Fechar">${ic('x')}</button>
     ${logo24('', true)}
-    <h3>Tem certeza que quer sair?</h3>
-    <p>Envie uma mensagem e <b>agende a sua reunião demonstrativa agora</b>. Em 20 minutos mostramos a 24AGÁ com os serviços da sua clínica.</p>
+    <h3>Antes de sair: teste grátis?</h3>
+    <p>Veja a IA atendendo <b>no WhatsApp da sua clínica</b> hoje mesmo. Sem compromisso.</p>
+    <a class="btn primary wide" href="https://app.24aga.com.br/teste.html" data-trial="janela-saida">🚀 Testar grátis no meu WhatsApp</a>
+    <p style="margin:6px 0 10px;font-size:13px;opacity:.8">Sem cartão. Leva 2 minutos. Ou, se preferir conversar:</p>
     <a class="btn wa wide" href="${waLink(msg)}" target="_blank" rel="noopener">${IC_WA} Agendar pelo WhatsApp</a>
     <div class="wa-num">(66) 99908-7424</div>
     <div class="row exit-acts"><button class="btn wide" data-a="closeModal">Continuar na demonstração</button><button class="btn ghost wide" data-a="go" data-r="pitch" data-force="1">Sair mesmo assim</button></div>
