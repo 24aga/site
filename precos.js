@@ -1,10 +1,10 @@
 /* 24AGÁ · PREÇOS — fonte única: tela "Preços" do painel ADM (tabelas pricing e pricing_config).
    Usado nas páginas (Clinic, Business, Food), cadastros, checkout, portal do parceiro e painel.
-   Mostra a oferta: preço "de" (+X%) riscado e o preço "por" (o que é cobrado).
+   Mostra a oferta: "Oferta especial · 30% OFF", preço "de" riscado e o preço "por" (o que é cobrado).
    Marcação automática no HTML:
      <span data-p24="profissional:m"></span>  → mensalidade com de/por  (… /mês)
      <span data-p24="profissional:s"></span>  → implantação com de/por
-     <span data-p24-badge></span>             → selo "Oferta especial · 23% OFF" (some se a oferta estiver desligada)
+     <span data-p24-badge></span>             → selo "Oferta especial · 30% OFF" (some se a oferta estiver desligada)
    Se o banco não responder, ficam os valores padrão abaixo. */
 (function () {
   const API = 'https://eqfrpmahzvrzzjrcsvbk.supabase.co/rest/v1/';
@@ -18,12 +18,14 @@
     resto_ia_pro: { name: 'Delivery + IA Pro', area: 'food', monthly: 297, setup: 197, conv_limit: 1500 },
     resto_ia_max: { name: 'Delivery + IA Max', area: 'food', monthly: 497, setup: 297, conv_limit: 4000 },
   };
-  const P = window.P24 = { plans: JSON.parse(JSON.stringify(DEF)), cfg: { show_offer: true, markup_pct: 30, badge: 'Oferta especial de lançamento' }, loaded: false };
+  const P = window.P24 = { plans: JSON.parse(JSON.stringify(DEF)), cfg: { show_offer: true, discount_pct: 30, badge: 'Oferta especial' }, loaded: false };
   const isInt = v => Math.abs(v - Math.round(v)) < 0.005;
   P.money = v => 'R$ ' + Number(v).toLocaleString('pt-BR', isInt(+v) ? { maximumFractionDigits: 0 } : { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  P.orig = v => { const o = Number(v) * (1 + Number(P.cfg.markup_pct || 0) / 100); return isInt(+v) ? Math.round(o) : Math.round(o * 100) / 100; };
-  P.pct = () => Math.round((1 - 1 / (1 + Number(P.cfg.markup_pct || 0) / 100)) * 100);
-  P.offer = () => !!P.cfg.show_offer && Number(P.cfg.markup_pct) > 0;
+  const D = () => Math.min(90, Math.max(0, Number(P.cfg.discount_pct ?? 30)));
+  // preço "de" calculado para o desconto mostrado ser exato (ex.: 30% OFF → preço ÷ 0,7)
+  P.orig = v => { const o = Number(v) / (1 - D() / 100); return isInt(+v) ? Math.round(o) : Math.round(o * 100) / 100; };
+  P.pct = () => Math.round(D());
+  P.offer = () => !!P.cfg.show_offer && D() > 0;
   P.get = k => P.plans[k] || null;
   // "de R$ 906 por R$ 697" em HTML (suffix: "/mês" etc.)
   P.html = (v, suffix = '') => !Number(v) ? `<b>Grátis</b>` : P.offer()
