@@ -204,16 +204,16 @@ footer{padding:30px 0 90px;color:var(--muted);font-size:13px;text-align:center}
   <div class="plans" style="text-align:left">
     <div class="plan"><h3>Grátis</h3><div class="pr">R$ 0<small>/mês</small></div><p class="who">Para começar hoje e parar de mandar PDF.</p>
       <ul><li>Cardápio online com fotos e opções</li><li>Link próprio para o Instagram</li><li>Pedidos no WhatsApp e no painel</li><li>Logo, capa e cor da marca</li><li class="no">Cozinha e impressão</li><li class="no">Avisos automáticos ao cliente</li><li class="no">IA atendente</li></ul>
-      <a class="btn dark" href="https://app.24aga.com.br/criar.html" data-ev="plan-gratis">Criar grátis</a></div>
+      <a class="btn dark" href="https://app.24aga.com.br/criar.html?plano=resto_gratis&amp;origem=food-planos" data-ev="plan-gratis">Criar grátis</a></div>
     <div class="plan top"><h3>Delivery</h3><div class="pr">R$ 97<small>/mês</small></div><p class="who">Para quem quer o delivery redondo.</p>
       <ul><li>Tudo do Grátis</li><li>Tela da cozinha + comanda impressa</li><li>Notificação no celular a cada pedido</li><li>Cliente avisado no WhatsApp: aceito, saiu, entregue</li><li>Resposta automática com o link do cardápio</li><li>Importar cardápio por PDF</li><li class="no">IA atendente</li></ul>
-      <a class="btn fire" href="https://wa.me/5566999087424?text=Ol%C3%A1!%20Quero%20o%20plano%20Delivery%20da%2024AG%C3%81%20para%20o%20meu%20restaurante." target="_blank" rel="noopener" data-ev="plan-delivery">Quero o Delivery</a></div>
+      <a class="btn fire" href="https://app.24aga.com.br/criar.html?plano=resto_delivery&amp;origem=food-planos" data-ev="plan-delivery">Quero o Delivery</a></div>
     <div class="plan"><h3>Delivery + IA <span id="iaName" style="color:var(--fire)">Start</span></h3>
       <div class="tier" role="group" aria-label="Clientes por mês"><button class="on" data-tier="0">até 500</button><button data-tier="1">até 1.500</button><button data-tier="2">até 4.000</button></div>
       <p class="xs-t">clientes diferentes atendidos pela IA por mês</p>
       <div class="pr" id="iaPr">R$ 197<small>/mês</small></div><p class="who">Uma atendente que nunca falta, nem no sábado à noite.</p>
       <ul><li>Tudo do Delivery</li><li>IA anota pedidos no WhatsApp 24h</li><li>Entende áudio e manda o resumo com o total</li><li>Follow-up: chama quem não finalizou</li><li id="iaLim">Até 500 clientes por mês atendidos pela IA</li><li>Montagem do cardápio feita por nós (opcional)</li></ul>
-      <a class="btn dark" id="iaCta" href="#" target="_blank" rel="noopener" data-ev="plan-ia">Quero a IA</a></div></div>
+      <a class="btn dark" id="iaCta" href="https://app.24aga.com.br/criar.html?plano=resto_ia&amp;origem=food-planos" data-ev="plan-ia">Quero a IA</a></div></div>
   </div>
   <p class="sub" style="margin:18px auto 0">Atende mais de 4.000 clientes por mês ou tem várias unidades? <a href="https://wa.me/5566999087424?text=Ol%C3%A1!%20Tenho%20um%20restaurante%20com%20grande%20movimento%20e%20quero%20um%20plano%20sob%20medida%20da%2024AG%C3%81%20Food." target="_blank" rel="noopener" style="color:var(--fire2);font-weight:700">Fale com a gente: plano sob medida →</a></p>
 </div></section>
@@ -249,7 +249,7 @@ function setTier(i) {
   document.getElementById('iaName').textContent = t.n;
   document.getElementById('iaPr').innerHTML = `R$ ${t.p}<small>/mês</small>`;
   document.getElementById('iaLim').textContent = `Até ${t.l} clientes por mês atendidos pela IA`;
-  document.getElementById('iaCta').href = 'https://wa.me/5566999087424?text=' + encodeURIComponent(`Olá! Quero o plano Delivery + IA ${t.n} (até ${t.l} clientes/mês) da 24AGÁ Food para o meu restaurante.`);
+  { const u = new URL('https://app.24aga.com.br/criar.html'); u.searchParams.set('plano', ['resto_ia','resto_ia_pro','resto_ia_max'][i]); u.searchParams.set('origem', 'food-planos'); try { const c = localStorage.getItem('24h.parceiro'); if (c) u.searchParams.set('parceiro', c); } catch (e) {} document.getElementById('iaCta').href = u.toString(); }
   if (typeof calc === 'function' && document.getElementById('fat')) calc();
 }
 document.addEventListener('click', e => { const b = e.target.closest('[data-tier]'); if (b) setTier(+b.dataset.tier); });
@@ -262,7 +262,14 @@ fat.oninput = calc; com.oninput = calc; setTier(0);
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1773671088100425'); fbq('track', 'PageView'); fbq('track', 'ViewContent', { content_name:'pagina-food' });
-document.addEventListener('click', e => { const a = e.target.closest('[data-ev]'); if (!a) return; const ev = a.dataset.ev; fbq(ev.startsWith('plan-') && ev !== 'plan-gratis' ? 'track' : 'trackCustom', ev.startsWith('plan-') && ev !== 'plan-gratis' ? 'Contact' : 'CliqueCriarGratis', { content_name: ev }); }, true);
+const FPRICE = { 'plan-gratis':0, 'plan-delivery':97, 'plan-ia':197 };
+document.addEventListener('click', e => {
+  const a = e.target.closest('[data-ev]'); if (!a) return; const ev = a.dataset.ev, href = a.getAttribute('href') || '';
+  if (ev.startsWith('plan-')) fbq('track', 'InitiateCheckout', { content_name: ev === 'plan-ia' ? 'resto_ia_' + (typeof tier !== 'undefined' ? ['start','pro','max'][tier] : 'start') : ev.slice(5), value: ev === 'plan-ia' && typeof iaPrice === 'function' ? iaPrice() : (FPRICE[ev] || 0), currency:'BRL', content_category:'food' });
+  if (/criar\.html/.test(href)) { fbq('track', 'StartTrial', { content_name: 'cardapio-gratis-' + ev, value: 0, currency:'BRL', content_category:'food' }); try { const u = new URL(a.href); if (!u.searchParams.get('origem')) u.searchParams.set('origem', 'food-' + ev); a.href = u.toString(); } catch (x) {} }
+  else if (/wa\.me/.test(href)) fbq('track', 'Contact', { content_name: ev, content_category:'food' });
+  else if (!ev.startsWith('plan-')) fbq('trackCustom', 'Clique', { content_name: ev, content_category:'food' });
+}, true);
 </script>
 <script>
 // link de parceiro (24aga.com.br/food/?parceiro=CODIGO): o cadastro do restaurante fica marcado para ele

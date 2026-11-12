@@ -325,7 +325,7 @@ function pitchView() {
         <div class="impl">+ implantação de <b>${money0(p.impl)}</b> (uma vez)</div>
         <ul>${p.feats.map(f => `<li>${ic('check')}<span>${f}</span></li>`).join('')}</ul>
         <details><summary>O que a implantação inclui</summary><ul>${IMPL24[p.k].map(f => `<li>${ic('check')}<span>${f}</span></li>`).join('')}</ul></details>
-        <button class="btn ${p.top ? 'primary' : ''} wide" data-a="choosePlan" data-k="${p.k}">Quero o ${p.name}</button></div>`).join('')}</div>
+        <button class="btn ${p.top ? 'primary' : ''} wide" data-a="choosePlan" data-k="${p.k}">Quero o ${p.name}</button><p class="xs" style="text-align:center;margin:8px 0 0;opacity:.75">Comece com teste grátis</p></div>`).join('')}</div>
       <div class="trial24"><div><b>Teste grátis antes de decidir</b><span>A IA atende no WhatsApp da sua clínica: até 100 respostas e 5 áudios, sem cartão.</span></div><a class="btn primary caps" href="https://app.24aga.com.br/teste.html" data-trial="planos">Começar teste grátis</a></div>
       <div class="pnotes">
         <div>${ic('check')}<span><b>Incluído na mensalidade:</b> IA, servidor, banco de dados no Brasil, lembretes de consulta, notificações, suporte e atualizações.</span></div>
@@ -521,7 +521,8 @@ const A = {
   toggleDetail: () => { UI.detail = !UI.detail; const y = scrollY; render(); scrollTo(0, y); },
   nextSteps: () => nextStepsModal(),
   pickNiche: t => { const k = t.dataset.k; if (k === S.niche) return; setNiche(k); UI.sel = { conv:null, patient:null, proposal:null }; const y = scrollY; render(); if (UI.mode === 'pitch') scrollTo(0, y); toast('Segmento: ' + NICHES[k].label); },
-  choosePlan: t => { UI.plan = t.dataset.k; const sel = $('#ld-p'); if (sel) sel.value = t.dataset.k; const el = document.getElementById('contato'); if (el) el.scrollIntoView({ behavior:'smooth' }); },
+  // botão "Quero o plano": vai para o teste grátis já com o plano escolhido (vira lead quente com o interesse registrado)
+  choosePlan: t => { UI.plan = t.dataset.k; const u = new URL('https://app.24aga.com.br/teste.html'); u.searchParams.set('plano', t.dataset.k); u.searchParams.set('origem', 'clinic-planos'); try { u.searchParams.set('segmento', currentNiche()); const c = localStorage.getItem('24h.parceiro'); if (c) u.searchParams.set('parceiro', c); } catch (e) {} setTimeout(() => { location.href = u.toString(); }, 250); },
   openSampleProposal: () => { UI.loggedOnce = true; UI.profile = 'admin'; const pr = S.proposals.find(p => p.pid === 'p3') || S.proposals[0]; goTo('propostas', pr.id); },
   overlay: (t, e) => { if (e.target === t) closeModal(); },
   closeModal: () => closeModal(),

@@ -46,7 +46,7 @@ document.addEventListener('click', e => {
   if (wa) return px('Contact', { content_name: wa.closest('.exit24') ? 'popup-saida' : wa.id === 'wa-float' ? 'botao-flutuante' : 'whatsapp', content_category: nicheNow() });
   const b = t.closest('[data-a]'); if (!b) return;
   const a = b.dataset.a;
-  if (a === 'choosePlan') { const p = planInfo(b.dataset.k); px('InitiateCheckout', { content_name: p.name || b.dataset.k, value: p.price || 0, currency: 'BRL', content_category: nicheNow() }); }
+  if (a === 'choosePlan') { const p = planInfo(b.dataset.k); px('InitiateCheckout', { content_name: p.name || b.dataset.k, value: p.price || 0, currency: 'BRL', content_category: 'clinic', nicho: nicheNow() }); }
   else if (a === 'pickNiche') px('EscolheuNicho', { nicho: b.dataset.k }, true);
   else if (a === 'startTour') px('TourDemonstracao', { nicho: nicheNow() }, true);
 }, true);
@@ -109,5 +109,6 @@ function pxLead(lead) {
 document.addEventListener('click', e => {
   const a = e.target.closest && e.target.closest('a[href^="https://app.24aga.com.br/teste.html"]'); if (!a) return;
   try { const c = localStorage.getItem('24h.parceiro'); if (c) { const u = new URL(a.href); u.searchParams.set('parceiro', c); a.href = u.toString(); } } catch (x) {}
-  px('StartTrial', { content_name: 'teste-gratis-' + (a.dataset.trial || 'site'), content_category: nicheNow() });
+  px('StartTrial', { content_name: 'teste-gratis-' + (a.dataset.trial || 'site'), content_category: 'clinic', value: 0, currency: 'BRL' });
+  try { const u = new URL(a.href); if (!u.searchParams.get('origem')) u.searchParams.set('origem', 'clinic-' + (a.dataset.trial || 'site')); u.searchParams.set('segmento', currentNiche()); a.href = u.toString(); } catch (x) {}
 }, true);
