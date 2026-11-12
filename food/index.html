@@ -89,7 +89,11 @@ h2{font-family:Montserrat;font-weight:800;font-size:clamp(28px,4.5vw,42px);line-
 .feat p{margin:0;color:var(--muted);line-height:1.5;font-size:15px}
 .calc{background:var(--dark);color:#fff;border-radius:26px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}
 .calc label{font-size:14px;color:#CFC3BA}
-.calc input[type=range]{width:100%;accent-color:var(--fire);margin:10px 0}
+.calc input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:10px;border-radius:999px;margin:14px 0 18px;cursor:pointer;background:linear-gradient(90deg,var(--fire) var(--p,30%),rgba(255,255,255,.18) var(--p,30%));outline:none}
+.calc input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:#fff;border:6px solid var(--fire);box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.calc input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#fff;border:6px solid var(--fire);box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.calc input[type=range]::-moz-range-track{height:10px;border-radius:999px;background:transparent}
+.calc label b{color:#fff;font-size:16px}
 .calc .big{font:900 clamp(30px,5vw,46px) Montserrat;color:var(--fire)}
 .calc .row{display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.12);padding:10px 0;font-size:15px}
 .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px;align-items:stretch}
@@ -106,6 +110,10 @@ h2{font-family:Montserrat;font-weight:800;font-size:clamp(28px,4.5vw,42px);line-
 .plan li.no{color:#B8AFA6}.plan li.no::before{content:"–";color:#B8AFA6}
 .plan .btn{width:100%}
 .faq{max-width:760px;margin:26px auto 0}
+.tier{display:flex;gap:6px;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:4px;margin:12px 0 4px}
+.tier button{flex:1;border:0;background:none;border-radius:9px;padding:9px 4px;font:700 13.5px Inter;cursor:pointer;color:var(--muted)}
+.tier button.on{background:var(--fire);color:#fff}
+.xs-t{font-size:12px;color:var(--muted);margin:0 0 4px}
 .faq details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:10px}
 .faq summary{font-weight:700;cursor:pointer;font-size:16px}
 .faq p{color:var(--muted);line-height:1.55;margin:10px 0 0}
@@ -176,7 +184,7 @@ footer{padding:30px 0 90px;color:var(--muted);font-size:13px;text-align:center}
     <div><span class="k" style="color:var(--yel)">Faça a conta</span><h2 style="color:#fff;margin-top:8px">Quanto você deixa de pagar em comissão?</h2>
       <label for="fat">Quanto você vende por mês em delivery: <b id="fatv">R$ 30.000</b></label><input type="range" id="fat" min="5000" max="150000" step="5000" value="30000">
       <label for="com">Comissão média do app: <b id="comv">20%</b></label><input type="range" id="com" min="10" max="30" step="1" value="20"></div>
-    <div><div class="row"><span>Comissão por mês no app</span><b id="r1">R$ 6.000</b></div><div class="row"><span>24AGÁ Delivery + IA</span><b>R$ 197</b></div>
+    <div><div class="row"><span>Comissão por mês no app</span><b id="r1">R$ 6.000</b></div><div class="row"><span>24AGÁ Delivery + IA</span><b id="r3">R$ 197</b></div>
       <p style="margin:16px 0 4px;color:#CFC3BA">Você economiza por mês</p><div class="big" id="r2">R$ 5.803</div>
       <p style="color:#9C918A;font-size:13px">Simulação para pedidos que vêm direto dos seus clientes pelo seu link. Taxas dos apps variam por plano.</p></div>
   </div>
@@ -184,7 +192,7 @@ footer{padding:30px 0 90px;color:var(--muted);font-size:13px;text-align:center}
 
 <section id="planos" style="padding-top:0"><div class="in center">
   <span class="k">Planos</span><h2>Comece grátis. Cresça quando quiser.</h2>
-  <p class="sub">Sem fidelidade no plano Grátis. Sem comissão em nenhum plano.</p>
+  <p class="sub">Sem fidelidade no plano Grátis. Sem comissão em nenhum plano. Na IA, você paga pelo tamanho do seu movimento.</p>
   <div class="plans" style="text-align:left">
     <div class="plan"><h3>Grátis</h3><div class="pr">R$ 0<small>/mês</small></div><p class="who">Para começar hoje e parar de mandar PDF.</p>
       <ul><li>Cardápio online com fotos e opções</li><li>Link próprio para o Instagram</li><li>Pedidos no WhatsApp e no painel</li><li>Logo, capa e cor da marca</li><li class="no">Cozinha e impressão</li><li class="no">Avisos automáticos ao cliente</li><li class="no">IA atendente</li></ul>
@@ -192,10 +200,14 @@ footer{padding:30px 0 90px;color:var(--muted);font-size:13px;text-align:center}
     <div class="plan top"><h3>Delivery</h3><div class="pr">R$ 97<small>/mês</small></div><p class="who">Para quem quer o delivery redondo.</p>
       <ul><li>Tudo do Grátis</li><li>Tela da cozinha + comanda impressa</li><li>Notificação no celular a cada pedido</li><li>Cliente avisado no WhatsApp: aceito, saiu, entregue</li><li>Resposta automática com o link do cardápio</li><li>Importar cardápio por PDF</li><li class="no">IA atendente</li></ul>
       <a class="btn fire" href="https://wa.me/5566999087424?text=Ol%C3%A1!%20Quero%20o%20plano%20Delivery%20da%2024AG%C3%81%20para%20o%20meu%20restaurante." target="_blank" rel="noopener" data-ev="plan-delivery">Quero o Delivery</a></div>
-    <div class="plan"><h3>Delivery + IA</h3><div class="pr">R$ 197<small>/mês</small></div><p class="who">Uma atendente que nunca falta, nem no sábado à noite.</p>
-      <ul><li>Tudo do Delivery</li><li>IA anota pedidos no WhatsApp 24h</li><li>Entende áudio e manda o resumo com o total</li><li>Follow-up: chama quem não finalizou</li><li>Até 1.500 conversas por mês</li><li>Montagem do cardápio feita por nós (opcional)</li></ul>
-      <a class="btn dark" href="https://wa.me/5566999087424?text=Ol%C3%A1!%20Quero%20a%20IA%20da%2024AG%C3%81%20anotando%20os%20pedidos%20do%20meu%20restaurante." target="_blank" rel="noopener" data-ev="plan-ia">Quero a IA</a></div>
+    <div class="plan"><h3>Delivery + IA <span id="iaName" style="color:var(--fire)">Start</span></h3>
+      <div class="tier" role="group" aria-label="Clientes por mês"><button class="on" data-tier="0">até 500</button><button data-tier="1">até 1.500</button><button data-tier="2">até 4.000</button></div>
+      <p class="xs-t">clientes diferentes atendidos pela IA por mês</p>
+      <div class="pr" id="iaPr">R$ 197<small>/mês</small></div><p class="who">Uma atendente que nunca falta, nem no sábado à noite.</p>
+      <ul><li>Tudo do Delivery</li><li>IA anota pedidos no WhatsApp 24h</li><li>Entende áudio e manda o resumo com o total</li><li>Follow-up: chama quem não finalizou</li><li id="iaLim">Até 500 clientes por mês atendidos pela IA</li><li>Montagem do cardápio feita por nós (opcional)</li></ul>
+      <a class="btn dark" id="iaCta" href="#" target="_blank" rel="noopener" data-ev="plan-ia">Quero a IA</a></div></div>
   </div>
+  <p class="sub" style="margin:18px auto 0">Atende mais de 4.000 clientes por mês ou tem várias unidades? <a href="https://wa.me/5566999087424?text=Ol%C3%A1!%20Tenho%20um%20restaurante%20com%20grande%20movimento%20e%20quero%20um%20plano%20sob%20medida%20da%2024AG%C3%81%20Food." target="_blank" rel="noopener" style="color:var(--fire2);font-weight:700">Fale com a gente: plano sob medida →</a></p>
 </div></section>
 
 <section style="padding-top:0"><div class="in center">
@@ -206,6 +218,7 @@ footer{padding:30px 0 90px;color:var(--muted);font-size:13px;text-align:center}
     <details><summary>Preciso de computador?</summary><p>Não. Dá para montar o cardápio, subir fotos e aceitar pedidos pelo celular. Para imprimir comanda, use um computador ou tablet com impressora térmica.</p></details>
     <details><summary>O cliente precisa baixar aplicativo?</summary><p>Não. Ele abre seu link, monta a sacola e envia o pedido pelo WhatsApp que ele já usa.</p></details>
     <details><summary>Já tenho o cardápio em PDF. Preciso digitar tudo?</summary><p>No plano Delivery você envia o PDF e a nossa IA cadastra os itens com preço, descrição e categoria. No Grátis, você cadastra pelo celular em poucos minutos.</p></details>
+    <details><summary>Como funcionam os planos com IA (Start, Pro e Max)?</summary><p>O preço acompanha o tamanho do seu movimento: <b>Start</b> atende até 500 clientes diferentes por mês (R$ 197), <b>Pro</b> até 1.500 (R$ 297) e <b>Max</b> até 4.000 (R$ 497). O mesmo cliente pedindo várias vezes no mês conta uma vez só. Se passar do limite, a IA passa a conversa para a sua equipe e você pode subir de plano quando quiser.</p></details>
     <details><summary>Como funciona a IA?</summary><p>No plano Delivery + IA, uma atendente virtual responde no WhatsApp do restaurante 24h: tira dúvidas do cardápio, anota itens e observações, pergunta entrega ou retirada, endereço e pagamento, mostra o total e só confirma quando o cliente disser sim. O pedido cai direto no painel.</p></details>
   </div>
 </div></section>
@@ -219,10 +232,24 @@ footer{padding:30px 0 90px;color:var(--muted);font-size:13px;text-align:center}
 <footer>24AGÁ Food · Seu delivery nunca para. · ROITY BUSINESS SOLUTIONS LTDA · CNPJ 53.472.596/0001-99 · <a href="/privacidade.html">Política de Privacidade</a></footer>
 <a class="waf" href="https://wa.me/5566999087424?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20do%2024AG%C3%81%20Food." target="_blank" rel="noopener" aria-label="Falar no WhatsApp" data-ev="wa-float"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg></a>
 <script>
+const TIERS = [{ n:'Start', p:197, l:'500' }, { n:'Pro', p:297, l:'1.500' }, { n:'Max', p:497, l:'4.000' }];
+let tier = 0;
+const iaPrice = () => TIERS[tier].p;
+function setTier(i) {
+  tier = i; const t = TIERS[i];
+  document.querySelectorAll('[data-tier]').forEach(b => b.classList.toggle('on', +b.dataset.tier === i));
+  document.getElementById('iaName').textContent = t.n;
+  document.getElementById('iaPr').innerHTML = `R$ ${t.p}<small>/mês</small>`;
+  document.getElementById('iaLim').textContent = `Até ${t.l} clientes por mês atendidos pela IA`;
+  document.getElementById('iaCta').href = 'https://wa.me/5566999087424?text=' + encodeURIComponent(`Olá! Quero o plano Delivery + IA ${t.n} (até ${t.l} clientes/mês) da 24AGÁ Food para o meu restaurante.`);
+  if (typeof calc === 'function' && document.getElementById('fat')) calc();
+}
+document.addEventListener('click', e => { const b = e.target.closest('[data-tier]'); if (b) setTier(+b.dataset.tier); });
 const fat = document.getElementById('fat'), com = document.getElementById('com');
 const brl = v => v.toLocaleString('pt-BR', { style:'currency', currency:'BRL', maximumFractionDigits:0 });
-function calc() { const f = +fat.value, c = +com.value, fee = f * c / 100; document.getElementById('fatv').textContent = brl(f); document.getElementById('comv').textContent = c + '%'; document.getElementById('r1').textContent = brl(fee); document.getElementById('r2').textContent = brl(Math.max(0, fee - 197)); }
-fat.oninput = calc; com.oninput = calc; calc();
+function paint(el) { el.style.setProperty('--p', ((el.value - el.min) / (el.max - el.min) * 100) + '%'); }
+function calc() { paint(fat); paint(com); const f = +fat.value, c = +com.value, fee = f * c / 100; document.getElementById('fatv').textContent = brl(f); document.getElementById('comv').textContent = c + '%'; document.getElementById('r1').textContent = brl(fee); document.getElementById('r2').textContent = brl(Math.max(0, fee - iaPrice())); document.getElementById('r3').textContent = brl(iaPrice()); }
+fat.oninput = calc; com.oninput = calc; setTier(0);
 </script>
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
