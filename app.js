@@ -222,7 +222,7 @@ function pitchView() {
   <div class="pitch p24">
     <header class="p-top"><div class="wrap">
       <button class="lg-btn" data-a="scrollTo" data-t="topo" aria-label="Início">${logo24('', true)}</button>
-      <nav><a href="#como" data-a="scrollTo" data-t="como">Como funciona</a><a href="#followup" data-a="scrollTo" data-t="followup">Follow-up</a><a href="#nichos" data-a="scrollTo" data-t="nichos">Para quem</a><a href="#planos" data-a="scrollTo" data-t="planos">Planos</a><a href="#duvidas" data-a="scrollTo" data-t="duvidas">Dúvidas</a></nav>
+      <nav><a href="#como" data-a="scrollTo" data-t="como">Como funciona</a><a href="#followup" data-a="scrollTo" data-t="followup">Follow-up</a><a href="#nichos" data-a="scrollTo" data-t="nichos">Para quem</a><a href="/food/">Restaurantes</a><a href="#planos" data-a="scrollTo" data-t="planos">Planos</a><a href="#duvidas" data-a="scrollTo" data-t="duvidas">Dúvidas</a></nav>
       <button class="btn primary sm" data-a="go" data-r="visao">Ver demonstração ${ic('arrow')}</button>
     </div></header>
 
@@ -366,7 +366,7 @@ function pitchView() {
     <section class="band close" id="contato"><div class="wrap">
       ${logo24('big', true)}
       <h2>Seu negócio nunca para.</h2>
-      <p class="lead" style="margin:0 auto">Deixe seus dados: a equipe ROITY Academy chama você no WhatsApp para mostrar a 24AGÁ com os serviços da sua clínica.</p>
+      <p class="lead" style="margin:0 auto">Deixe seus dados: a equipe 24AGÁ chama você no WhatsApp para mostrar a 24AGÁ com os serviços da sua clínica.</p>
       <form class="lead-form" data-f="lead">
         <div class="grid2"><div class="field"><label for="ld-n">Seu nome</label><input class="input" id="ld-n" required autocomplete="name"></div>
         <div class="field"><label for="ld-c">Nome da clínica ou consultório</label><input class="input" id="ld-c" required></div></div>
@@ -374,14 +374,13 @@ function pitchView() {
         <div class="field"><label for="ld-ci">Cidade</label><input class="input" id="ld-ci" autocomplete="address-level2"></div></div>
         <div class="grid2"><div class="field"><label for="ld-s">Segmento</label><select class="input" id="ld-s">${NICHE_KEYS.map(k => `<option value="${k}" ${k===nk?'selected':''}>${esc(NICHES[k].label)}</option>`).join('')}</select></div>
         <div class="field"><label for="ld-p">Plano de interesse</label><select class="input" id="ld-p">${PLANS24.map(p => `<option value="${p.k}" ${UI.plan===p.k?'selected':''}>${p.name} · ${money0(p.price)}/mês</option>`).join('')}<option value="indefinido">Ainda não sei</option></select></div></div>
-        <label class="consent"><input type="checkbox" id="ld-ok" required> Autorizo a ROITY Academy a me chamar no WhatsApp sobre a 24AGÁ e li a <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</label>
+        <label class="consent"><input type="checkbox" id="ld-ok" required> Autorizo a 24AGÁ a me chamar no WhatsApp sobre a 24AGÁ e li a <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</label>
         <button class="btn primary caps wide">Quero a 24AGÁ na minha clínica</button>
         <p class="muted-b xs" id="ld-msg" aria-live="polite"></p>
       </form>
     </div></section>
     <footer class="p-foot"><div class="wrap ft">
-      <div>${logo24('sm', true)}<p>24AGÁ · Seu negócio nunca para. Uma plataforma da ROITY Academy. As clínicas, pessoas e conversas da demonstração são fictícias.</p><p class="p-legal"><a href="privacidade.html">Política de Privacidade</a> · <a href="https://wa.me/5566999087424" target="_blank" rel="noopener">Contato</a><br>ROITY BUSINESS SOLUTIONS LTDA · CNPJ 53.472.596/0001-99 · Juara, MT</p></div>
-      <img class="ra" src="roity-academy.png" alt="ROITY Academy">
+      <div>${logo24('sm', true)}<p>24AGÁ · Seu negócio nunca para. As clínicas, pessoas e conversas da demonstração são fictícias.</p><p class="p-legal"><a href="privacidade.html">Política de Privacidade</a> · <a href="https://wa.me/5566999087424" target="_blank" rel="noopener">Contato</a><br>ROITY BUSINESS SOLUTIONS LTDA · CNPJ 53.472.596/0001-99 · Juara, MT</p></div>
     </div></footer>
   </div>`;
 }
@@ -434,7 +433,7 @@ function shell(content) {
   const mainB = routes.slice(0, 4);
   return `<div class="app">
     <header class="topbar">
-      <button class="brand" data-a="go" data-r="${routes[0]}"><img src="mono.svg" alt="24AGÁ"><div><b>${esc(UI.profile === 'plataforma' ? 'Plataforma' : S.settings.product)}</b><small>${UI.profile === 'plataforma' ? '24AGÁ · ROITY Academy' : esc(S.settings.clinic)}</small></div></button>
+      <button class="brand" data-a="go" data-r="${routes[0]}"><img src="mono.svg" alt="24AGÁ"><div><b>${esc(UI.profile === 'plataforma' ? 'Plataforma' : S.settings.product)}</b><small>${UI.profile === 'plataforma' ? '24AGÁ · 24AGÁ' : esc(S.settings.clinic)}</small></div></button>
       <span class="demo-badge hide-m">Modo demonstração</span>
       <span class="sp"></span>
       <select class="prof-sel hide-m" data-c="niche" aria-label="Trocar segmento">${NICHE_KEYS.map(k => `<option value="${k}" ${S.niche===k?'selected':''}>${esc(NICHES[k].short)}</option>`).join('')}</select>
@@ -551,8 +550,8 @@ const F = {
     const r = await saveLead(lead);
     btn.disabled = false;
     if (r.ok && typeof pxLead === 'function') pxLead(lead);
-    if (r.ok && r.viaWhats) { window.open(`https://wa.me/${CFG.WHATSAPP}?text=${encodeURIComponent(`Olá! Sou ${lead.name}, da ${lead.clinic} (${lead.city || 'cidade não informada'}). Quero conhecer a 24AGÁ, plano ${lead.plan}.`)}`, '_blank', 'noopener'); msg.textContent = 'Abrindo o WhatsApp da equipe ROITY Academy…'; }
-    else if (r.ok) { f.reset(); msg.innerHTML = 'Recebido! A equipe ROITY Academy vai chamar você no WhatsApp.' + (CFG.WHATSAPP ? ` <a href="https://wa.me/${CFG.WHATSAPP}?text=${encodeURIComponent('Olá! Quero conhecer a 24AGÁ para a ' + lead.clinic + '.')}" target="_blank" rel="noopener">Ou fale agora pelo WhatsApp.</a>` : ''); }
+    if (r.ok && r.viaWhats) { window.open(`https://wa.me/${CFG.WHATSAPP}?text=${encodeURIComponent(`Olá! Sou ${lead.name}, da ${lead.clinic} (${lead.city || 'cidade não informada'}). Quero conhecer a 24AGÁ, plano ${lead.plan}.`)}`, '_blank', 'noopener'); msg.textContent = 'Abrindo o WhatsApp da equipe 24AGÁ…'; }
+    else if (r.ok) { f.reset(); msg.innerHTML = 'Recebido! A equipe 24AGÁ vai chamar você no WhatsApp.' + (CFG.WHATSAPP ? ` <a href="https://wa.me/${CFG.WHATSAPP}?text=${encodeURIComponent('Olá! Quero conhecer a 24AGÁ para a ' + lead.clinic + '.')}" target="_blank" rel="noopener">Ou fale agora pelo WhatsApp.</a>` : ''); }
     else if (r.notConfigured) msg.textContent = 'Demonstração: o envio de verdade é ligado quando o banco de dados da 24AGÁ estiver configurado.';
     else msg.textContent = 'Não foi possível enviar agora. Tente de novo em instantes.';
   },
