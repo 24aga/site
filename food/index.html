@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>24AGÁ Food · Cardápio digital grátis com pedidos no WhatsApp</title>
+<meta name="description" content="Cardápio digital grátis para hamburguerias, pizzarias e restaurantes. Pedidos no WhatsApp e no painel, cozinha, comanda e IA que anota pedidos. Sem comissão por pedido.">
+<link rel="canonical" href="https://24aga.com.br/food/">
+<meta name="theme-color" content="#0B0B0F">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://24aga.com.br/food/">
+<meta property="og:title" content="24AGÁ Food · Cardápio digital grátis + pedidos no WhatsApp">
+<meta property="og:description" content="Sem comissão por pedido. Monte seu cardápio em 2 minutos e receba pedidos no WhatsApp e no painel.">
+<meta property="og:image" content="https://24aga.com.br/og-24aga.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,800&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{--ink:#14110F;--muted:#6B635C;--line:#ECE6DF;--bg:#FFF9F3;--card:#fff;--fire:#E4572E;--fire2:#C2410C;--yel:#FFB020;--dark:#0B0B0F;--blue:#1F5BFF;--ok:#16A34A}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;max-width:100%;overflow-x:clip}
+a{color:inherit}
+.in{max-width:1120px;margin:0 auto;padding:0 18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:14px;padding:16px 22px;font:700 16px Inter;text-decoration:none;cursor:pointer;transition:transform .12s}
+.btn:hover{transform:translateY(-1px)}
+.btn.fire{background:var(--fire);color:#fff;box-shadow:0 12px 30px rgba(228,87,46,.35)}
+.btn.ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.25)}
+.btn.dark{background:var(--dark);color:#fff}
+.btn.wa{background:#25D366;color:#fff}
+/* topo */
+nav{position:sticky;top:0;z-index:20;background:rgba(11,11,15,.88);backdrop-filter:blur(10px);color:#fff}
+nav .in{display:flex;justify-content:space-between;align-items:center;height:62px;gap:10px}
+.lg{display:flex;align-items:center;gap:9px;text-decoration:none;color:#fff}
+.lg img{width:32px;height:32px;border-radius:8px}
+.lg b{font-family:Montserrat;font-weight:800;font-size:20px}.lg b i{font-style:normal;color:var(--blue)}
+.lg small{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#FFB4A0;display:block;margin-top:2px}
+nav .btn{padding:10px 16px;font-size:14px}
+/* hero */
+.hero{background:radial-gradient(70% 70% at 85% 30%,rgba(228,87,46,.45),transparent 60%),radial-gradient(50% 60% at 0% 100%,rgba(255,176,32,.18),transparent),var(--dark);color:#fff;padding:54px 0 70px;overflow:hidden}
+.hero .in{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--yel);background:rgba(255,176,32,.12);padding:6px 12px;border-radius:999px}
+h1{font-family:Montserrat;font-weight:900;font-size:clamp(34px,6vw,58px);line-height:1.03;letter-spacing:-.03em;margin:16px 0 14px}
+h1 em{font-style:italic;color:var(--fire)}
+.hero p.lead{font-size:18px;line-height:1.55;color:#E9DED6;max-width:560px;margin:0 0 24px}
+.ctas{display:flex;gap:10px;flex-wrap:wrap}
+.trust{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px;color:#CFC3BA;font-size:14px}
+/* celular */
+.phone{justify-self:center;width:300px;max-width:100%;background:#000;border-radius:42px;padding:10px;box-shadow:0 40px 80px rgba(0,0,0,.5),0 0 0 2px #2a2a2a;transform:rotate(2deg)}
+.scr{background:#0F1218;border-radius:33px;overflow:hidden;height:600px;position:relative;color:#F3F4F6}
+.scr .cv{height:120px;background:linear-gradient(135deg,#7C2D12,#E4572E 60%,#FFB020)}
+.scr .lo{width:64px;height:64px;border-radius:18px;background:#fff;color:var(--fire);display:grid;place-items:center;font:900 26px Montserrat;margin:-32px 0 0 16px;border:3px solid #0F1218}
+.scr h4{font-family:Montserrat;margin:8px 16px 2px;font-size:19px}
+.scr .ab{margin:0 16px;color:#9CA3AF;font-size:12px}
+.scr .pl{display:flex;gap:6px;margin:10px 16px;flex-wrap:wrap}
+.scr .pl span{font-size:10.5px;font-weight:700;border-radius:999px;padding:4px 8px;background:#1F2937}
+.scr .pl .on{background:#14532D;color:#86EFAC}
+.scr .tabs{display:flex;gap:6px;margin:6px 16px 10px}
+.scr .tabs span{font-size:11.5px;font-weight:700;padding:6px 10px;border-radius:999px;color:#9CA3AF}
+.scr .tabs .on{background:var(--fire);color:#fff}
+.scr .it{display:flex;gap:10px;margin:0 12px 8px;background:#161B25;border:1px solid #232a38;border-radius:14px;padding:10px}
+.scr .it .t{flex:1}
+.scr .it b{font-size:13px;display:block}
+.scr .it small{color:#9CA3AF;font-size:11px;display:block;margin:2px 0 4px}
+.scr .it .p{font-weight:800;font-size:13px}
+.scr .it .im{width:62px;height:62px;border-radius:10px;flex:none;display:grid;place-items:center;font-size:30px;background:linear-gradient(135deg,#3B1D0E,#7C2D12)}
+.scr .bag{position:absolute;left:10px;right:10px;bottom:12px;background:var(--fire);border-radius:14px;padding:12px 14px;display:flex;justify-content:space-between;font-weight:800;font-size:13px}
+/* seções */
+section{padding:70px 0}
+h2{font-family:Montserrat;font-weight:800;font-size:clamp(28px,4.5vw,42px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 14px}
+.sub{color:var(--muted);font-size:17px;line-height:1.55;max-width:680px}
+.center{text-align:center}.center .sub{margin:0 auto}
+.k{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--fire2)}
+.pains{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.pain{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.pain b{display:block;font-size:17px;margin:8px 0 6px}
+.pain p{margin:0;color:var(--muted);line-height:1.5}
+.em{font-size:30px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px;counter-reset:s}
+.step{background:var(--dark);color:#fff;border-radius:20px;padding:22px;position:relative}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:18px;right:20px;font:900 44px Montserrat;color:rgba(255,255,255,.12)}
+.step b{display:block;font-size:18px;margin:8px 0 6px}
+.step p{margin:0;color:#CFC3BA;line-height:1.5}
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.feat b{display:block;font-size:16px;margin:8px 0 6px}
+.feat p{margin:0;color:var(--muted);line-height:1.5;font-size:15px}
+.calc{background:var(--dark);color:#fff;border-radius:26px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}
+.calc label{font-size:14px;color:#CFC3BA}
+.calc input[type=range]{width:100%;accent-color:var(--fire);margin:10px 0}
+.calc .big{font:900 clamp(30px,5vw,46px) Montserrat;color:var(--fire)}
+.calc .row{display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.12);padding:10px 0;font-size:15px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px;align-items:stretch}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;display:flex;flex-direction:column}
+.plan.top{border:2px solid var(--fire);box-shadow:0 20px 50px rgba(228,87,46,.18);position:relative}
+.plan.top::before{content:"MAIS ESCOLHIDO";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--fire);color:#fff;font-size:11px;font-weight:800;letter-spacing:.1em;padding:5px 12px;border-radius:999px}
+.plan h3{font-family:Montserrat;font-size:20px;margin:0}
+.plan .pr{font:900 40px Montserrat;margin:10px 0 2px}
+.plan .pr small{font:600 15px Inter;color:var(--muted)}
+.plan .who{color:var(--muted);font-size:14px;margin:0 0 14px}
+.plan ul{list-style:none;padding:0;margin:0 0 20px;flex:1}
+.plan li{padding:7px 0 7px 26px;position:relative;font-size:15px;border-bottom:1px dashed var(--line)}
+.plan li::before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:900}
+.plan li.no{color:#B8AFA6}.plan li.no::before{content:"–";color:#B8AFA6}
+.plan .btn{width:100%}
+.faq{max-width:760px;margin:26px auto 0}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:10px}
+.faq summary{font-weight:700;cursor:pointer;font-size:16px}
+.faq p{color:var(--muted);line-height:1.55;margin:10px 0 0}
+.final{background:radial-gradient(60% 80% at 50% 0%,rgba(228,87,46,.5),transparent),var(--dark);color:#fff;border-radius:30px;padding:46px 24px;text-align:center}
+.final h2{color:#fff}
+footer{padding:30px 0 90px;color:var(--muted);font-size:13px;text-align:center}
+.waf{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.waf svg{width:30px;height:30px;fill:#fff}
+@media (max-width:900px){.hero .in{grid-template-columns:1fr}.phone{transform:none;margin-top:10px}.pains,.steps,.feats,.plans{grid-template-columns:1fr}.calc{grid-template-columns:1fr}section{padding:54px 0}nav .hide-m{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="in"><a class="lg" href="/food/"><img src="/favicon-32.png" alt=""><span><b>24<i>AGÁ</i> <span style="color:#E4572E">Food</span></b><small>cardápio + pedidos</small></span></a>
+  <div style="display:flex;gap:8px"><a class="btn ghost hide-m" href="#planos">Planos</a><a class="btn fire" href="https://app.24aga.com.br/criar.html" data-ev="cta-nav">Criar grátis</a></div></div></nav>
+
+<header class="hero"><div class="in">
+  <div>
+    <span class="eyebrow">🍔 Hamburguerias · pizzarias · restaurantes · delivery</span>
+    <h1>Cardápio digital <em>grátis</em> e pedidos direto no seu WhatsApp.</h1>
+    <p class="lead">Monte seu cardápio com fotos em 2 minutos, mande o link no Instagram e receba pedidos organizados no WhatsApp e no painel. <b>Sem comissão por pedido.</b> O dinheiro é todo seu.</p>
+    <div class="ctas"><a class="btn fire" href="https://app.24aga.com.br/criar.html" data-ev="cta-hero">Criar meu cardápio grátis →</a><a class="btn ghost" href="#como">Ver como funciona</a></div>
+    <div class="trust"><span>✓ Grátis para sempre</span><span>✓ Sem cartão</span><span>✓ Você monta sozinho</span></div>
+  </div>
+  <div class="phone" aria-hidden="true"><div class="scr">
+    <div class="cv"></div><div class="lo">B</div><h4>Burger do Zé</h4><p class="ab">Hambúrguer artesanal na brasa 🔥</p>
+    <div class="pl"><span class="on">● Aberto · até 23:30</span><span>🛵 R$ 5</span><span>⏱️ 30–45 min</span></div>
+    <div class="tabs"><span class="on">Lanches</span><span>Combos</span><span>Bebidas</span></div>
+    <div class="it"><div class="t"><b>X-Bacon Artesanal</b><small>Pão brioche, blend 160g, bacon crocante, cheddar</small><span class="p">R$ 34,90</span></div><div class="im">🍔</div></div>
+    <div class="it"><div class="t"><b>Combo Smash Duplo</b><small>Smash duplo + fritas + refri lata</small><span class="p">R$ 42,90</span></div><div class="im">🍟</div></div>
+    <div class="it"><div class="t"><b>Milkshake Ovomaltine</b><small>500 ml, cremoso de verdade</small><span class="p">R$ 19,90</span></div><div class="im">🥤</div></div>
+    <div class="bag"><span>🛍️ Ver sacola · 3 itens</span><span>R$ 97,70</span></div>
+  </div></div>
+</div></header>
+
+<section><div class="in center">
+  <span class="k">O problema</span><h2>Seu delivery merece mais do que um PDF no WhatsApp</h2>
+  <p class="sub">Todo dia é a mesma coisa: cliente pedindo o cardápio, pergunta de preço, pedido anotado errado e o app de delivery levando uma fatia de cada venda.</p>
+  <div class="pains">
+    <div class="pain"><span class="em">💸</span><b>Comissão comendo o lucro</b><p>Os apps de delivery costumam cobrar comissão sobre cada pedido. Num mês bom, isso vira milhares de reais que ficam com eles.</p></div>
+    <div class="pain"><span class="em">📵</span><b>WhatsApp bagunçado</b><p>Áudio, foto do cardápio, "tem o de bacon?", endereço pela metade… e o pedido sai errado no meio da correria.</p></div>
+    <div class="pain"><span class="em">🧾</span><b>Nada organizado</b><p>Pedido no caderno, cozinha perguntando o que é para fazer, motoboy sem endereço. Ninguém sabe quanto vendeu no dia.</p></div>
+  </div>
+</div></section>
+
+<section id="como" style="padding-top:0"><div class="in center">
+  <span class="k">Como funciona</span><h2>3 passos e você está vendendo</h2>
+  <div class="steps" style="text-align:left">
+    <div class="step"><span class="em">📸</span><b>Monte seu cardápio</b><p>Suba fotos, preços, tamanhos e adicionais pelo celular. Tem PDF do cardápio? A gente lê e cadastra tudo.</p></div>
+    <div class="step"><span class="em">🔗</span><b>Divulgue seu link</b><p>Você ganha um link bonito (app.24aga.com.br/c/seunome) para a bio do Instagram, status e grupos.</p></div>
+    <div class="step"><span class="em">🛎️</span><b>Receba pedidos organizados</b><p>O cliente monta a sacola e envia. O pedido chega no WhatsApp e no painel, com som, para você aceitar e mandar para a cozinha.</p></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="in center">
+  <span class="k">Tudo o que você precisa</span><h2>Melhor que cardápio pago, e você começa de graça</h2>
+  <div class="feats" style="text-align:left">
+    <div class="feat"><span class="em">🎨</span><b>Com a cara da sua marca</b><p>Logo, foto de capa e a cor do seu restaurante. Aberto/fechado automático pelo seu horário.</p></div>
+    <div class="feat"><span class="em">🍔</span><b>Opções como nos apps grandes</b><p>Tamanho, ponto da carne, sabores e adicionais com preço. O total soma sozinho.</p></div>
+    <div class="feat"><span class="em">⭐</span><b>Destaques e busca</b><p>Carrossel com os campeões de venda, categorias e busca para o cliente achar rápido.</p></div>
+    <div class="feat"><span class="em">🛎️</span><b>Painel de pedidos</b><p>Pedido com número, itens, observações, endereço e troco. Aceite com um toque.</p></div>
+    <div class="feat"><span class="em">👨‍🍳</span><b>Tela da cozinha + comanda</b><p>Pedidos aceitos em cartões grandes e impressão de comanda (térmica 80 mm ou comum).</p></div>
+    <div class="feat"><span class="em">🤖</span><b>IA que anota pedidos</b><p>No plano com IA, ela atende no WhatsApp 24h, entende áudio, mostra o total e confirma o pedido.</p></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="in">
+  <div class="calc">
+    <div><span class="k" style="color:var(--yel)">Faça a conta</span><h2 style="color:#fff;margin-top:8px">Quanto você deixa de pagar em comissão?</h2>
+      <label for="fat">Quanto você vende por mês em delivery: <b id="fatv">R$ 30.000</b></label><input type="range" id="fat" min="5000" max="150000" step="5000" value="30000">
+      <label for="com">Comissão média do app: <b id="comv">20%</b></label><input type="range" id="com" min="10" max="30" step="1" value="20"></div>
+    <div><div class="row"><span>Comissão por mês no app</span><b id="r1">R$ 6.000</b></div><div class="row"><span>24AGÁ Delivery + IA</span><b>R$ 197</b></div>
+      <p style="margin:16px 0 4px;color:#CFC3BA">Você economiza por mês</p><div class="big" id="r2">R$ 5.803</div>
+      <p style="color:#9C918A;font-size:13px">Simulação para pedidos que vêm direto dos seus clientes pelo seu link. Taxas dos apps variam por plano.</p></div>
+  </div>
+</div></section>
+
+<section id="planos" style="padding-top:0"><div class="in center">
+  <span class="k">Planos</span><h2>Comece grátis. Cresça quando quiser.</h2>
+  <p class="sub">Sem fidelidade no plano Grátis. Sem comissão em nenhum plano.</p>
+  <div class="plans" style="text-align:left">
+    <div class="plan"><h3>Grátis</h3><div class="pr">R$ 0<small>/mês</small></div><p class="who">Para começar hoje e parar de mandar PDF.</p>
+      <ul><li>Cardápio online com fotos e opções</li><li>Link próprio para o Instagram</li><li>Pedidos no WhatsApp e no painel</li><li>Logo, capa e cor da marca</li><li class="no">Cozinha e impressão</li><li class="no">Avisos automáticos ao cliente</li><li class="no">IA atendente</li></ul>
+      <a class="btn dark" href="https://app.24aga.com.br/criar.html" data-ev="plan-gratis">Criar grátis</a></div>
+    <div class="plan top"><h3>Delivery</h3><div class="pr">R$ 97<small>/mês</small></div><p class="who">Para quem quer o delivery redondo.</p>
+      <ul><li>Tudo do Grátis</li><li>Tela da cozinha + comanda impressa</li><li>Notificação no celular a cada pedido</li><li>Cliente avisado no WhatsApp: aceito, saiu, entregue</li><li>Resposta automática com o link do cardápio</li><li>Importar cardápio por PDF</li><li class="no">IA atendente</li></ul>
+      <a class="btn fire" href="https://wa.me/5566999087424?text=Ol%C3%A1!%20Quero%20o%20plano%20Delivery%20da%2024AG%C3%81%20para%20o%20meu%20restaurante." target="_blank" rel="noopener" data-ev="plan-delivery">Quero o Delivery</a></div>
+    <div class="plan"><h3>Delivery + IA</h3><div class="pr">R$ 197<small>/mês</small></div><p class="who">Uma atendente que nunca falta, nem no sábado à noite.</p>
+      <ul><li>Tudo do Delivery</li><li>IA anota pedidos no WhatsApp 24h</li><li>Entende áudio e manda o resumo com o total</li><li>Follow-up: chama quem não finalizou</li><li>Até 1.500 conversas por mês</li><li>Montagem do cardápio feita por nós (opcional)</li></ul>
+      <a class="btn dark" href="https://wa.me/5566999087424?text=Ol%C3%A1!%20Quero%20a%20IA%20da%2024AG%C3%81%20anotando%20os%20pedidos%20do%20meu%20restaurante." target="_blank" rel="noopener" data-ev="plan-ia">Quero a IA</a></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="in center">
+  <span class="k">Dúvidas</span><h2>Perguntas frequentes</h2>
+  <div class="faq" style="text-align:left">
+    <details><summary>É grátis mesmo? Qual a pegadinha?</summary><p>É grátis para sempre no plano Grátis: cardápio online, link próprio e pedidos no WhatsApp e no painel. Se um dia quiser cozinha, impressão, avisos automáticos ou a IA, você faz upgrade. Sem cartão para começar.</p></details>
+    <details><summary>Vocês cobram comissão por pedido?</summary><p>Não. Em nenhum plano. Você paga só a mensalidade do plano escolhido (ou nada, no Grátis).</p></details>
+    <details><summary>Preciso de computador?</summary><p>Não. Dá para montar o cardápio, subir fotos e aceitar pedidos pelo celular. Para imprimir comanda, use um computador ou tablet com impressora térmica.</p></details>
+    <details><summary>O cliente precisa baixar aplicativo?</summary><p>Não. Ele abre seu link, monta a sacola e envia o pedido pelo WhatsApp que ele já usa.</p></details>
+    <details><summary>Já tenho o cardápio em PDF. Preciso digitar tudo?</summary><p>No plano Delivery você envia o PDF e a nossa IA cadastra os itens com preço, descrição e categoria. No Grátis, você cadastra pelo celular em poucos minutos.</p></details>
+    <details><summary>Como funciona a IA?</summary><p>No plano Delivery + IA, uma atendente virtual responde no WhatsApp do restaurante 24h: tira dúvidas do cardápio, anota itens e observações, pergunta entrega ou retirada, endereço e pagamento, mostra o total e só confirma quando o cliente disser sim. O pedido cai direto no painel.</p></details>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="in"><div class="final">
+  <h2>Seu cardápio novo fica pronto hoje.</h2>
+  <p class="sub" style="color:#E9DED6;margin:0 auto 22px">Leva 2 minutos para criar. Sem cartão, sem comissão, sem complicação.</p>
+  <a class="btn fire" href="https://app.24aga.com.br/criar.html" data-ev="cta-final">Criar meu cardápio grátis →</a>
+</div></div></section>
+
+<footer>24AGÁ Food · Seu delivery nunca para. · ROITY BUSINESS SOLUTIONS LTDA · CNPJ 53.472.596/0001-99 · <a href="/privacidade.html">Política de Privacidade</a></footer>
+<a class="waf" href="https://wa.me/5566999087424?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20do%2024AG%C3%81%20Food." target="_blank" rel="noopener" aria-label="Falar no WhatsApp" data-ev="wa-float"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg></a>
+<script>
+const fat = document.getElementById('fat'), com = document.getElementById('com');
+const brl = v => v.toLocaleString('pt-BR', { style:'currency', currency:'BRL', maximumFractionDigits:0 });
+function calc() { const f = +fat.value, c = +com.value, fee = f * c / 100; document.getElementById('fatv').textContent = brl(f); document.getElementById('comv').textContent = c + '%'; document.getElementById('r1').textContent = brl(fee); document.getElementById('r2').textContent = brl(Math.max(0, fee - 197)); }
+fat.oninput = calc; com.oninput = calc; calc();
+</script>
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1773671088100425'); fbq('track', 'PageView'); fbq('track', 'ViewContent', { content_name:'pagina-food' });
+document.addEventListener('click', e => { const a = e.target.closest('[data-ev]'); if (!a) return; const ev = a.dataset.ev; fbq(ev.startsWith('plan-') && ev !== 'plan-gratis' ? 'track' : 'trackCustom', ev.startsWith('plan-') && ev !== 'plan-gratis' ? 'Contact' : 'CliqueCriarGratis', { content_name: ev }); }, true);
+</script>
+</body>
+</html>
