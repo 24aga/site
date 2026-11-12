@@ -798,3 +798,7 @@ body:has(.tour) .waf,body:has(.overlay) .waf,body:has(.drawer) .waf{display:none
 @media print{.waf{display:none}}
 .p-legal{margin-top:8px;font-size:13px}.p-legal a{color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:.85}
 .consent a{color:inherit;text-decoration:underline}
+
+.trial24{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin:18px 0;padding:20px 22px;border-radius:18px;background:linear-gradient(135deg,#1F5BFF,#0B2E9E);color:#fff}
+.trial24 b{display:block;font-size:19px;margin-bottom:4px}.trial24 span{color:#DBE4FF;font-size:14.5px}
+.trial24 .btn{background:#fff;color:#0B2E9E}

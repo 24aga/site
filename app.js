@@ -222,7 +222,7 @@ function pitchView() {
   <div class="pitch p24">
     <header class="p-top"><div class="wrap">
       <button class="lg-btn" data-a="scrollTo" data-t="topo" aria-label="Início">${logo24('', true)}</button>
-      <nav><a href="#como" data-a="scrollTo" data-t="como">Como funciona</a><a href="#followup" data-a="scrollTo" data-t="followup">Follow-up</a><a href="#nichos" data-a="scrollTo" data-t="nichos">Para quem</a><a href="/food/">Restaurantes</a><a href="#planos" data-a="scrollTo" data-t="planos">Planos</a><a href="#duvidas" data-a="scrollTo" data-t="duvidas">Dúvidas</a></nav>
+      <nav><a href="#como" data-a="scrollTo" data-t="como">Como funciona</a><a href="#followup" data-a="scrollTo" data-t="followup">Follow-up</a><a href="#nichos" data-a="scrollTo" data-t="nichos">Para quem</a><a href="/food/">Restaurantes</a><a href="/business/">Empresas</a><a href="#planos" data-a="scrollTo" data-t="planos">Planos</a><a href="#duvidas" data-a="scrollTo" data-t="duvidas">Dúvidas</a></nav>
       <button class="btn primary sm" data-a="go" data-r="visao">Ver demonstração ${ic('arrow')}</button>
     </div></header>
 
@@ -232,7 +232,8 @@ function pitchView() {
         <h1 style="margin-top:12px">Sua clínica atende <span class="hl">24 horas</span>. <em>Você só aprova.</em></h1>
         <p class="sub">A 24AGÁ responde o WhatsApp na hora, tira dúvidas, oferece horários livres, organiza cada paciente no funil e avisa você no celular. A decisão continua sendo sua.</p>
         <div class="ctas">
-          <button class="btn primary caps" data-a="go" data-r="assistente">${ic('play')} Testar a IA agora</button>
+          <a class="btn primary caps" href="https://app.24aga.com.br/teste.html" data-trial="hero">🚀 Teste grátis no seu WhatsApp</a>
+          <button class="btn caps" data-a="go" data-r="assistente">${ic('play')} Ver a IA funcionando</button>
           <button class="btn caps" data-a="scrollTo" data-t="planos">Ver planos e valores</button>
         </div>
         <div class="seal">${ic('shield')} WhatsApp oficial da Meta · dados no Brasil · você aprova cada agendamento</div>
@@ -325,6 +326,7 @@ function pitchView() {
         <ul>${p.feats.map(f => `<li>${ic('check')}<span>${f}</span></li>`).join('')}</ul>
         <details><summary>O que a implantação inclui</summary><ul>${IMPL24[p.k].map(f => `<li>${ic('check')}<span>${f}</span></li>`).join('')}</ul></details>
         <button class="btn ${p.top ? 'primary' : ''} wide" data-a="choosePlan" data-k="${p.k}">Quero o ${p.name}</button></div>`).join('')}</div>
+      <div class="trial24"><div><b>Teste grátis antes de decidir</b><span>A IA atende no WhatsApp da sua clínica: até 100 respostas e 5 áudios, sem cartão.</span></div><a class="btn primary caps" href="https://app.24aga.com.br/teste.html" data-trial="planos">Começar teste grátis</a></div>
       <div class="pnotes">
         <div>${ic('check')}<span><b>Incluído na mensalidade:</b> IA, servidor, banco de dados no Brasil, lembretes de consulta, notificações, suporte e atualizações.</span></div>
         <div>${ic('wallet')}<span><b>Pago direto à Meta, só se usar:</b> mensagens de campanha em massa (cerca de R$ 0,35 cada). Responder quem chamou primeiro não tem custo na Meta.</span></div>
@@ -376,6 +378,7 @@ function pitchView() {
         <div class="field"><label for="ld-p">Plano de interesse</label><select class="input" id="ld-p">${PLANS24.map(p => `<option value="${p.k}" ${UI.plan===p.k?'selected':''}>${p.name} · ${money0(p.price)}/mês</option>`).join('')}<option value="indefinido">Ainda não sei</option></select></div></div>
         <label class="consent"><input type="checkbox" id="ld-ok" required> Autorizo a 24AGÁ a me chamar no WhatsApp sobre a 24AGÁ e li a <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</label>
         <button class="btn primary caps wide">Quero a 24AGÁ na minha clínica</button>
+        <p class="xs" style="text-align:center;margin:10px 0 0">Prefere testar sozinho? <a href="https://app.24aga.com.br/teste.html" data-trial="form"><b>Crie seu teste grátis em 2 minutos →</b></a></p>
         <p class="muted-b xs" id="ld-msg" aria-live="polite"></p>
       </form>
     </div></section>

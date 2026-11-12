@@ -104,3 +104,10 @@ function pxLead(lead) {
   };
   if (document.body) show(); else document.addEventListener('DOMContentLoaded', show);
 })();
+
+// teste grátis: leva o código do parceiro e conta no Pixel
+document.addEventListener('click', e => {
+  const a = e.target.closest && e.target.closest('a[href^="https://app.24aga.com.br/teste.html"]'); if (!a) return;
+  try { const c = localStorage.getItem('24h.parceiro'); if (c) { const u = new URL(a.href); u.searchParams.set('parceiro', c); a.href = u.toString(); } } catch (x) {}
+  px('StartTrial', { content_name: 'teste-gratis-' + (a.dataset.trial || 'site'), content_category: nicheNow() });
+}, true);
