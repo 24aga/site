@@ -202,6 +202,9 @@ const IMPL24 = {
   premium:['Tudo do Profissional','Várias profissionais, salas e unidades','Roteiros de pós-atendimento e campanha de reativação','Acompanhamento semanal no 1º mês'],
 };
 const money0 = v => 'R$ ' + Number(v).toLocaleString('pt-BR');
+// preços do painel ADM (precos.js): atualiza os planos e redesenha a página
+const p24h = (v, suf) => window.P24 ? P24.html(v, suf || '') : `<b>${money0(v)}</b>${suf || ''}`;
+document.addEventListener('p24', () => { PLANS24.forEach(p => { const x = P24.get(p.k); if (x) { p.price = x.monthly; p.impl = x.setup; } }); try { if (typeof UI !== 'undefined' && UI.mode === 'pitch' && document.querySelector('#app .pitch')) { const y = scrollY; render(); scrollTo(0, y); } } catch (e) {} });
 const logo24 = (cls='', tag) => `<span class="lg24 ${cls}" role="img" aria-label="24AGÁ"><img src="mono.svg" alt=""><span class="lw"><span class="wm">24<b>AGÁ</b></span>${tag ? '<span class="tg">Atendimento inteligente</span>' : ''}</span></span>`;
 
 function pitchView() {
@@ -324,11 +327,12 @@ function pitchView() {
     <section class="band light" id="planos"><div class="wrap">
       <span class="eyebrow">Planos e valores</span>
       <h2>Implantação uma vez. Mensalidade fixa.</h2>
+      ${window.P24 && P24.offer() ? `<div style="margin:4px 0 10px"><span style="display:inline-block;background:#DC2626;color:#fff;font-weight:800;font-size:13px;letter-spacing:.04em;padding:6px 12px;border-radius:999px">${P24.badge()}</span></div>` : ''}
       <p class="lead">A implantação cobre configurar o WhatsApp, cadastrar os serviços e treinar a IA com o jeito da sua clínica. A mensalidade cobre a plataforma rodando, a IA, os lembretes e o suporte.</p>
       <div class="pricing">${PLANS24.map(p => `<div class="price ${p.top ? 'top' : ''}">${p.top ? '<span class="ribbon">Mais escolhido</span>' : ''}
         <h4>${p.name}</h4><p class="who">${p.who}</p>
-        <div class="pv"><b>${money0(p.price)}</b><span>/mês</span></div>
-        <div class="impl">+ implantação de <b>${money0(p.impl)}</b> (uma vez)</div>
+        <div class="pv">${p24h(p.price, '<span>/mês</span>')}</div>
+        <div class="impl">+ implantação de ${p24h(p.impl)} (uma vez) · 30 dias grátis de mensalidade</div>
         <ul>${p.feats.map(f => `<li>${ic('check')}<span>${f}</span></li>`).join('')}</ul>
         <details><summary>O que a implantação inclui</summary><ul>${IMPL24[p.k].map(f => `<li>${ic('check')}<span>${f}</span></li>`).join('')}</ul></details>
         <button class="btn ${p.top ? 'primary' : ''} wide" data-a="choosePlan" data-k="${p.k}">Quero o ${p.name}</button><p class="xs" style="text-align:center;margin:8px 0 0;opacity:.75">Comece com teste grátis</p></div>`).join('')}</div>
@@ -345,7 +349,7 @@ function pitchView() {
       <span class="eyebrow">Faça a conta</span>
       <h2>Recepcionista ou 24AGÁ?</h2>
       <div class="cmp-wrap"><table class="cmp"><thead><tr><th></th><th>Recepcionista</th><th class="us">24AGÁ Profissional</th></tr></thead><tbody>
-        ${[['Custo mensal','R$ 3.000 a R$ 4.000 com encargos','R$ 697'],['Horário','Horário comercial','24 horas, 7 dias'],['Tempo de resposta','Quando consegue','Segundos'],['Férias, faltas, atestado','Sim','Não'],['Atende várias conversas ao mesmo tempo','Uma por vez','Todas'],['Esquece de retornar','Acontece','Funil e lembretes automáticos'],['Relatório do mês','Manual','Automático']]
+        ${[['Custo mensal','R$ 3.000 a R$ 4.000 com encargos',money0((PLANS24.find(p => p.k === 'profissional') || {}).price || 697)],['Horário','Horário comercial','24 horas, 7 dias'],['Tempo de resposta','Quando consegue','Segundos'],['Férias, faltas, atestado','Sim','Não'],['Atende várias conversas ao mesmo tempo','Uma por vez','Todas'],['Esquece de retornar','Acontece','Funil e lembretes automáticos'],['Relatório do mês','Manual','Automático']]
           .map(([a,b,c]) => `<tr><td>${a}</td><td>${b}</td><td class="us">${c}</td></tr>`).join('')}
       </tbody></table></div>
       <p class="muted-b">A 24AGÁ não substitui a sua equipe: faz o atendimento inicial e a organização, para que as pessoas cuidem do que precisa de gente.</p>

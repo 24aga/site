@@ -210,19 +210,19 @@ footer{padding:30px 0 90px;color:var(--muted);font-size:13px;text-align:center}
 </div></section>
 
 <section id="planos" style="padding-top:0"><div class="in center">
-  <span class="k">Planos</span><h2>Comece grátis. Cresça quando quiser.</h2>
+  <span class="k">Planos</span><h2>Comece grátis. Cresça quando quiser.</h2><div style="margin:6px 0 0"><span data-p24-badge hidden style="display:inline-block;background:#DC2626;color:#fff;font-weight:800;font-size:13px;letter-spacing:.04em;padding:6px 12px;border-radius:999px"></span></div>
   <p class="sub">Sem fidelidade no plano Grátis. Sem comissão em nenhum plano. Na IA, você paga pelo tamanho do seu movimento.</p>
   <div class="plans" style="text-align:left">
     <div class="plan"><h3>Grátis</h3><div class="pr">R$ 0<small>/mês</small></div><p class="who">Para começar hoje e parar de mandar PDF.</p>
       <ul><li>Cardápio online com fotos e opções</li><li>Link próprio para o Instagram</li><li>Pedidos no WhatsApp e no painel</li><li>Logo, capa e cor da marca</li><li class="no">Cozinha e impressão</li><li class="no">Avisos automáticos ao cliente</li><li class="no">IA atendente</li></ul>
       <a class="btn dark" href="https://app.24aga.com.br/criar.html?plano=resto_gratis&amp;origem=food-planos" data-ev="plan-gratis">Criar grátis</a></div>
-    <div class="plan top"><h3>Delivery</h3><div class="pr">R$ 97<small>/mês</small></div><p class="who">Para quem quer o delivery redondo.</p>
+    <div class="plan top"><h3>Delivery</h3><div class="pr" data-p24="resto_delivery:m">R$ 97<small>/mês</small></div><p class="who" style="margin:-2px 0 8px">+ implantação <span data-p24="resto_delivery:s">R$ 197</span> (uma vez) · 30 dias grátis</p><p class="who">Para quem quer o delivery redondo.</p>
       <ul><li>Tudo do Grátis</li><li>Tela da cozinha + comanda impressa</li><li>Notificação no celular a cada pedido</li><li>Cliente avisado no WhatsApp: aceito, saiu, entregue</li><li>Resposta automática com o link do cardápio</li><li>Importar cardápio por PDF</li><li class="no">IA atendente</li></ul>
       <a class="btn fire" href="https://app.24aga.com.br/criar.html?plano=resto_delivery&amp;origem=food-planos" data-ev="plan-delivery">Quero o Delivery</a></div>
     <div class="plan"><h3>Delivery + IA <span id="iaName" style="color:var(--fire)">Start</span></h3>
       <div class="tier" role="group" aria-label="Clientes por mês"><button class="on" data-tier="0">até 500</button><button data-tier="1">até 1.500</button><button data-tier="2">até 4.000</button></div>
       <p class="xs-t">clientes diferentes atendidos pela IA por mês</p>
-      <div class="pr" id="iaPr">R$ 197<small>/mês</small></div><p class="who">Uma atendente que nunca falta, nem no sábado à noite.</p>
+      <div class="pr" id="iaPr">R$ 197<small>/mês</small></div><p class="who" style="margin:-2px 0 8px">+ implantação <span id="iaImpl">R$ 197</span> (uma vez) · 30 dias grátis</p><p class="who">Uma atendente que nunca falta, nem no sábado à noite.</p>
       <ul><li>Tudo do Delivery</li><li>IA anota pedidos no WhatsApp 24h</li><li>Entende áudio e manda o resumo com o total</li><li>Follow-up: chama quem não finalizou</li><li id="iaLim">Até 500 clientes por mês atendidos pela IA</li><li>Montagem do cardápio feita por nós (opcional)</li></ul>
       <a class="btn dark" id="iaCta" href="https://app.24aga.com.br/criar.html?plano=resto_ia&amp;origem=food-planos" data-ev="plan-ia">Quero a IA</a></div></div>
   </div>
@@ -253,6 +253,7 @@ footer{padding:30px 0 90px;color:var(--muted);font-size:13px;text-align:center}
 <footer>24AGÁ Food · Seu delivery nunca para. · ROITY BUSINESS SOLUTIONS LTDA · CNPJ 53.472.596/0001-99 · <a href="/privacidade.html">Política de Privacidade</a> · <a href="/termos.html">Termos de Uso</a></footer>
 <a class="trialbar" href="https://app.24aga.com.br/criar.html" data-ev="cta-barra-fixa">🍔 Criar meu cardápio grátis</a>
 <a class="waf" href="https://wa.me/5566999087424?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20do%2024AG%C3%81%20Food." target="_blank" rel="noopener" aria-label="Falar no WhatsApp" data-ev="wa-float"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg></a>
+<script src="/precos.js?v=1"></script>
 <script>
 const TIERS = [{ n:'Start', p:197, l:'500' }, { n:'Pro', p:297, l:'1.500' }, { n:'Max', p:497, l:'4.000' }];
 let tier = 0;
@@ -261,7 +262,9 @@ function setTier(i) {
   tier = i; const t = TIERS[i];
   document.querySelectorAll('[data-tier]').forEach(b => b.classList.toggle('on', +b.dataset.tier === i));
   document.getElementById('iaName').textContent = t.n;
-  document.getElementById('iaPr').innerHTML = `R$ ${t.p}<small>/mês</small>`;
+  const pk = ['resto_ia','resto_ia_pro','resto_ia_max'][i], pp = window.P24 && P24.get(pk);
+  document.getElementById('iaPr').innerHTML = pp ? P24.html(pp.monthly, '<small>/mês</small>') : `R$ ${t.p}<small>/mês</small>`;
+  if (pp) document.getElementById('iaImpl').innerHTML = P24.html(pp.setup);
   document.getElementById('iaLim').textContent = `Até ${t.l} clientes por mês atendidos pela IA`;
   { const u = new URL('https://app.24aga.com.br/criar.html'); u.searchParams.set('plano', ['resto_ia','resto_ia_pro','resto_ia_max'][i]); u.searchParams.set('origem', 'food-planos'); try { const c = localStorage.getItem('24h.parceiro'); if (c) u.searchParams.set('parceiro', c); } catch (e) {} document.getElementById('iaCta').href = u.toString(); }
   if (typeof calc === 'function' && document.getElementById('fat')) calc();
@@ -272,6 +275,8 @@ const brl = v => v.toLocaleString('pt-BR', { style:'currency', currency:'BRL', m
 function paint(el) { el.style.setProperty('--p', ((el.value - el.min) / (el.max - el.min) * 100) + '%'); }
 function calc() { paint(fat); paint(com); const f = +fat.value, c = +com.value, fee = f * c / 100; document.getElementById('fatv').textContent = brl(f); document.getElementById('comv').textContent = c + '%'; document.getElementById('r1').textContent = brl(fee); document.getElementById('r2').textContent = brl(Math.max(0, fee - iaPrice())); document.getElementById('r3').textContent = brl(iaPrice()); }
 fat.oninput = calc; com.oninput = calc; setTier(0);
+// preços do ADM: atualiza os planos com IA e a calculadora
+document.addEventListener('p24', () => { ['resto_ia','resto_ia_pro','resto_ia_max'].forEach((k, j) => { const p = P24.get(k); if (p) TIERS[j].p = p.monthly; }); setTier(tier); });
 </script>
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
