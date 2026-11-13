@@ -1,0 +1,47 @@
+# 24AGÁ
+
+> 24AGÁ é uma atendente com inteligência artificial no WhatsApp, feita no Brasil, que responde clientes 24 horas, tira dúvidas, passa preços, agenda horários, confirma presença, faz follow-up e vende, avisando a equipe no celular quando precisa de uma pessoa. Atende clínicas e consultórios, salões e barbearias, escritórios de advocacia e contabilidade, imobiliárias, pet shops, empresas e lojas, e restaurantes (cardápio digital grátis, pedidos no WhatsApp sem comissão).
+
+Fatos principais:
+- Funciona no número de WhatsApp que o negócio já usa (conexão por QR Code ou API oficial da Meta).
+- A IA usa só as informações aprovadas pelo negócio; não dá diagnóstico, parecer jurídico ou orientação veterinária, e encaminha urgências para a equipe.
+- Agenda na agenda real do negócio, sem conflito, com aprovação da equipe em um toque.
+- Confirmação, lembretes, lista de espera, follow-up automático, Pix na conversa, entende áudio.
+- App para celular e computador com conversas, agenda, funil de clientes e relatórios em reais.
+- Preços: planos Essencial (R$ 397/mês), Profissional (R$ 697/mês) e Premium (R$ 1.197/mês) mais implantação única; restaurantes com cardápio grátis e planos a partir de R$ 97/mês. Sem comissão por venda ou pedido. Teste grátis sem cartão (100 mensagens).
+- Empresa: ROITY BUSINESS SOLUTIONS LTDA, CNPJ 53.472.596/0001-99. Contato: WhatsApp +55 66 99908-7424.
+
+## Páginas principais
+- [Clínicas e consultórios](https://24aga.com.br/): atendente com IA para clínicas, odontologia, estética, médicos e bem-estar.
+- [Empresas e lojas](https://24aga.com.br/business/): atendente que vende, com catálogo e Pix no WhatsApp.
+- [Restaurantes · 24AGÁ Food](https://24aga.com.br/food/): cardápio digital grátis, pedidos no WhatsApp sem comissão.
+- [Salões](https://24aga.com.br/salao/), [Escritórios](https://24aga.com.br/escritorio/), [Imobiliárias](https://24aga.com.br/imobiliaria/), [Pet shops](https://24aga.com.br/petshop/)
+- [Preços](https://24aga.com.br/precos/)
+- [Chatbot ou atendente com IA](https://24aga.com.br/comparativo/chatbot-ou-atendente-ia/) · [Recepcionista ou IA](https://24aga.com.br/comparativo/recepcionista-ou-atendente-ia/)
+- [Ferramentas grátis](https://24aga.com.br/ferramentas/)
+
+## Segmentos
+- [Odontologia](https://24aga.com.br/odontologia/): Atendente com IA para consultórios e clínicas odontológicas: responde o WhatsApp 24h, agenda avaliações, confirma consultas e retoma orçamentos de implante e ortodontia. Teste grátis.
+- [Estética](https://24aga.com.br/estetica/): Atendente com IA para clínicas de estética e harmonização facial: responde leads do Instagram em segundos, agenda avaliações e faz follow-up de quem pediu valor. Teste grátis.
+- [Médicos](https://24aga.com.br/medicos/): Atendente com IA para consultórios médicos e especialistas: responde o WhatsApp 24h, agenda consultas, confirma presença e encaminha urgências para a equipe. Teste grátis.
+- [Advocacia](https://24aga.com.br/advocacia/): Atendente com IA para escritórios de advocacia: responde o WhatsApp 24h, faz a triagem do caso, marca reuniões e nunca dá parecer jurídico. Teste grátis.
+- [Contabilidade](https://24aga.com.br/contabilidade/): Atendente com IA para contadores: responde clientes e novos contatos no WhatsApp 24h, organiza pedidos, marca reuniões e não dá parecer tributário. Teste grátis.
+- [Barbearias](https://24aga.com.br/barbearia/): Atendente com IA para barbearias: responde o WhatsApp 24h, agenda corte e barba com cada barbeiro, lembra o cliente e chama de volta quem sumiu. Teste grátis.
+
+## Blog
+- [Agenda de salão e barbearia pelo WhatsApp: como lotar horários sem largar o atendimento](https://24aga.com.br/blog/agenda-de-salao-e-barbearia-pelo-whatsapp/): Como organizar a agenda do salão de beleza ou barbearia pelo WhatsApp: horários por profissional, confirmação, lista de espera, retorno de clientes e avaliação no Google.
+- [Agendamento de banho e tosa pelo WhatsApp: guia para pet shops](https://24aga.com.br/blog/agendamento-de-banho-e-tosa-pelo-whatsapp/): Como pet shops e clínicas veterinárias podem organizar o agendamento de banho, tosa e consultas pelo WhatsApp, com preço por porte, lembretes e retorno automático.
+- [Atendimento de escritório de advocacia e contabilidade no WhatsApp: triagem, sigilo e reuniões](https://24aga.com.br/blog/atendimento-de-escritorio-de-advocacia-no-whatsapp/): Como escritórios de advocacia e contabilidade podem atender no WhatsApp com rapidez e sigilo: triagem de casos, agendamento de reuniões, follow-up de propostas e uso de IA sem dar parecer.
+- [Atendimento no WhatsApp para clínicas: guia completo para responder, agendar e não perder pacientes](https://24aga.com.br/blog/atendimento-no-whatsapp-para-clinicas/): Guia prático de atendimento no WhatsApp para clínicas e consultórios: tempo de resposta, como passar preço, agendar, confirmar, reduzir faltas e usar IA com segurança.
+- [Cardápio digital grátis e sem comissão: como vender delivery pelo WhatsApp](https://24aga.com.br/blog/cardapio-digital-gratis-sem-comissao/): Como criar um cardápio digital grátis, receber pedidos direto no WhatsApp sem comissão por pedido e levar clientes do aplicativo de delivery para o seu próprio canal.
+- [Chatbot ou IA no WhatsApp: qual a diferença e qual vende mais](https://24aga.com.br/blog/chatbot-ou-atendente-ia-no-whatsapp/): Entenda a diferença entre chatbot de menu e atendente com inteligência artificial no WhatsApp, quando usar cada um e por que a IA converte mais em vendas e agendamentos.
+- [Como fazer seu negócio aparecer no Google e ser indicado pelo ChatGPT](https://24aga.com.br/blog/como-aparecer-no-google-e-nas-ias/): Passo a passo para pequenos negócios aparecerem no Google Maps, na busca e nas respostas de IAs como ChatGPT e Gemini: perfil da empresa, avaliações, site e conteúdo.
+- [Como atender clientes fora do horário comercial no WhatsApp (sem virar refém do celular)](https://24aga.com.br/blog/como-atender-clientes-fora-do-horario/): Estratégias para atender clientes que chamam à noite, nos fins de semana e feriados pelo WhatsApp: mensagem automática, horários prontos, IA e regras para a equipe.
+- [Como escolher uma atendente com IA para WhatsApp: checklist com 12 perguntas](https://24aga.com.br/blog/como-escolher-atendente-ia-whatsapp/): Checklist para escolher uma atendente ou agente de inteligência artificial para o WhatsApp da sua empresa: segurança, agenda, número, preço, suporte e resultados.
+- [Como reduzir faltas na clínica: 9 ações práticas que funcionam](https://24aga.com.br/blog/como-reduzir-faltas-na-clinica/): Aprenda a reduzir faltas e cancelamentos de última hora na clínica ou consultório com confirmação, lembretes, lista de espera, política clara e acompanhamento.
+- [Como responder leads de imobiliária no WhatsApp: velocidade, perfil e visita marcada](https://24aga.com.br/blog/como-responder-leads-de-imobiliaria/): Guia para imobiliárias e corretores responderem leads de portais e anúncios no WhatsApp: tempo de resposta, perguntas de qualificação, modelos de mensagem e agendamento de visita.
+- [Como responder "quanto custa?" no WhatsApp sem perder o cliente](https://24aga.com.br/blog/como-responder-preco-no-whatsapp/): Aprenda a responder a pergunta de preço no WhatsApp com contexto, valor percebido e próximo passo. Modelos para clínicas, salões, escritórios e lojas.
+- [IA no WhatsApp é segura para clínicas? Limites, LGPD e boas práticas](https://24aga.com.br/blog/ia-no-whatsapp-e-seguro-para-clinicas/): Entenda como usar atendente com inteligência artificial no WhatsApp da clínica com segurança: o que a IA pode e não pode responder, urgências, dados de pacientes e LGPD.
+- [Mensagem de confirmação de consulta: 15 modelos prontos para WhatsApp](https://24aga.com.br/blog/mensagem-de-confirmacao-de-consulta-modelos/): 15 modelos de mensagem de confirmação de consulta e agendamento para WhatsApp: véspera, dia, remarcação, primeira consulta, retorno, salão, pet shop e escritório.
+- [Follow-up no WhatsApp: modelos prontos e o tempo certo para retomar clientes](https://24aga.com.br/blog/modelos-de-follow-up-no-whatsapp/): Modelos de mensagem de follow-up para WhatsApp e a sequência ideal (1 hora, 1 dia, 3 dias) para retomar quem pediu orçamento ou preço e sumiu, sem ser chato.
+- [Quanto custa uma recepcionista e quando vale usar uma atendente com IA](https://24aga.com.br/blog/quanto-custa-uma-recepcionista/): Entenda os custos de uma recepcionista (salário, encargos, benefícios) e compare com uma atendente com IA no WhatsApp. Com calculadora para o seu negócio.
