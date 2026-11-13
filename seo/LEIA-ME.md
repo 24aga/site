@@ -8,3 +8,5 @@ Rode `python3 seo/build.py` na pasta do site depois de qualquer mudança. Ele ge
 Novo artigo: copie um `.md` de `seo/artigos/`, troque o cabeçalho (title, desc, h1, intro, cat, seg, date, tldr, related, pages) e o texto, e rode o build.
 A página inicial tem uma "foto" do HTML dentro de `<div id="app">` para Google e IAs lerem; se o texto da home mudar, gere a foto de novo.
 Esta pasta não é publicada (veja `.vercelignore`).
+
+Depois de publicar, rode `python3 seo/indexnow.py` para avisar o Bing das páginas novas (chave em `seo/indexnow.key`, arquivo público na raiz).
