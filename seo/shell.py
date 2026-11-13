@@ -1,5 +1,6 @@
 """24AGÁ · moldura comum das páginas de conteúdo (preços, comparativos, ferramentas, blog)."""
 import html, json
+from urllib.parse import quote
 SITE = 'https://24aga.com.br'
 WA = '5566999087424'
 TRIAL = 'https://app.24aga.com.br/teste.html'
@@ -47,6 +48,13 @@ WA_SVG = '<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.
 
 FOOT_LINKS = [('/', 'Clínicas'), ('/business/', 'Empresas'), ('/food/', 'Restaurantes'), ('/salao/', 'Salões'), ('/escritorio/', 'Escritórios'),
               ('/imobiliaria/', 'Imobiliárias'), ('/petshop/', 'Pet shops'), ('/precos/', 'Preços'), ('/blog/', 'Blog'), ('/ferramentas/', 'Ferramentas grátis')]
+
+SEG_WA = {'salao': 'para o meu salão', 'escritorio': 'para o meu escritório', 'imobiliaria': 'para a minha imobiliária', 'petshop': 'para o meu pet shop',
+          'odonto': 'para o meu consultório odontológico', 'estetica': 'para a minha clínica de estética', 'medico': 'para o meu consultório', 'bemestar': 'para a minha clínica',
+          'loja': 'para a minha loja', 'food': 'e o cardápio digital para o meu restaurante'}
+def wa_text(seg='', path=''):
+    onde = 'Vim pelo blog da 24AGÁ.' if path.startswith('/blog/') else 'Vim pelo site da 24AGÁ.'
+    return 'Oi! Quero minha assistente no WhatsApp' + (' ' + SEG_WA[seg] if seg in SEG_WA else '') + '. ' + onde
 
 def trial(src, seg=''):
     if seg == 'food': return f'https://app.24aga.com.br/criar.html?origem={src}'
@@ -98,7 +106,7 @@ def page(path, title, desc, h1, intro, body, crumbs=None, ld=None, meta='', og='
 <header class="hd"><div class="in nr">{cr}<h1>{h1}</h1><p>{intro}</p>{f'<div class="meta">{meta}</div>' if meta else ''}</div></header>
 <main><div class="in nr">{body}</div></main>
 <footer class="ft">{foot}24AGÁ · Atendente com IA no WhatsApp · ROITY BUSINESS SOLUTIONS LTDA · CNPJ 53.472.596/0001-99<br><a href="/privacidade.html">Privacidade</a> · <a href="/termos.html">Termos</a></footer>
-<a class="waf" href="https://wa.me/{WA}?text={esc('Ol%C3%A1!%20Vim%20pelo%20site%20da%2024AG%C3%81.')}" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">{WA_SVG}</a>
+<a class="waf" href="https://wa.me/{WA}?text={quote(wa_text(seg, path))}" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">{WA_SVG}</a>
 <script>
 !function(f,b,e,v,n,t,s){{if(f.fbq)return;n=f.fbq=function(){{n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)}};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init','1773671088100425');fbq('track','PageView');

@@ -403,7 +403,7 @@ function pitchView() {
 
 const waLink = txt => `https://wa.me/${CFG.WHATSAPP || '5566999087424'}?text=${encodeURIComponent(txt)}`;
 function exitModal() {
-  const msg = `Olá! Vi a demonstração da 24AGÁ (${NICHES[S.niche].label}) e quero agendar minha reunião demonstrativa.`;
+  const msg = `Oi! Quero minha assistente no WhatsApp para a minha clínica (${NICHES[S.niche].label}). Vi a demonstração e quero agendar uma reunião.`;
   openModal(`<div class="exit24">
     <button class="x-btn" data-a="closeModal" aria-label="Fechar">${ic('x')}</button>
     ${logo24('', true)}
@@ -606,7 +606,7 @@ function updWaFloat() {
   document.body.dataset.mode = UI.mode;
   const nl = (NICHES[currentNiche()] || {}).label || '';
   const txt = UI.mode === 'pitch'
-    ? 'Olá! Vim pelo site da 24AGÁ e quero agendar uma reunião demonstrativa.'
-    : `Olá! Estou vendo a demonstração da 24AGÁ${nl ? ' (' + nl + ')' : ''} e quero agendar uma reunião demonstrativa.`;
+    ? 'Oi! Quero minha assistente no WhatsApp para a minha clínica. Vim pelo site da 24AGÁ.'
+    : `Oi! Quero minha assistente no WhatsApp para a minha clínica${nl ? ' (' + nl + ')' : ''}. Vi a demonstração no site e quero uma reunião.`;
   a.href = waLink(txt);
 }
