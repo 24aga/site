@@ -50,6 +50,7 @@ FOOT_LINKS = [('/', 'Clínicas'), ('/business/', 'Empresas'), ('/food/', 'Restau
 
 def trial(src, seg=''):
     if seg == 'food': return f'https://app.24aga.com.br/criar.html?origem={src}'
+    if seg == 'loja': return f'{TRIAL}?tipo=loja&origem={src}'
     q = f'?origem={src}' + (f'&segmento={seg}' if seg else '')
     return TRIAL + q
 

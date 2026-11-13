@@ -5,7 +5,7 @@ import os, re, glob, html
 from shell import *
 DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'artigos')
 CATS = {'clinicas': 'Clínicas e consultórios', 'saloes': 'Salões e barbearias', 'escritorios': 'Escritórios', 'imobiliarias': 'Imobiliárias',
-        'petshops': 'Pet shops', 'restaurantes': 'Restaurantes e delivery', 'whatsapp': 'Atendimento no WhatsApp', 'ia': 'Inteligência artificial'}
+        'petshops': 'Pet shops', 'restaurantes': 'Restaurantes e delivery', 'lojas': 'Lojas e vendas', 'whatsapp': 'Atendimento no WhatsApp', 'ia': 'Inteligência artificial'}
 
 def inline(t):
     t = html.escape(t, quote=False)
