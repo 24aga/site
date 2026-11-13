@@ -225,7 +225,7 @@ function pitchView() {
   <div class="pitch p24">
     <header class="p-top"><div class="wrap">
       <button class="lg-btn" data-a="scrollTo" data-t="topo" aria-label="Início">${logo24('', true)}</button>
-      <nav><a href="#como" data-a="scrollTo" data-t="como">Como funciona</a><a href="#followup" data-a="scrollTo" data-t="followup">Follow-up</a><a href="#nichos" data-a="scrollTo" data-t="nichos">Para quem</a><a href="/food/">Restaurantes</a><a href="/business/">Empresas</a><a href="#planos" data-a="scrollTo" data-t="planos">Planos</a><a href="#duvidas" data-a="scrollTo" data-t="duvidas">Dúvidas</a></nav>
+      <nav><a href="#como" data-a="scrollTo" data-t="como">Como funciona</a><a href="#followup" data-a="scrollTo" data-t="followup">Follow-up</a><a href="#nichos" data-a="scrollTo" data-t="nichos">Para quem</a><a href="/food/">Restaurantes</a><a href="/business/">Empresas</a><a href="/blog/">Blog</a><a href="#planos" data-a="scrollTo" data-t="planos">Planos</a><a href="#duvidas" data-a="scrollTo" data-t="duvidas">Dúvidas</a></nav>
       <div class="row" style="gap:8px;flex-wrap:nowrap"><button class="btn sm hide-sm" data-a="go" data-r="visao">Ver demonstração</button><a class="btn primary sm" href="https://app.24aga.com.br/teste.html" data-trial="topo-menu">Testar grátis ${ic('arrow')}</a></div>
     </div></header>
     <a class="trialbar" href="https://app.24aga.com.br/teste.html" data-trial="barra-fixa">🚀 Testar grátis no meu WhatsApp</a>
@@ -396,7 +396,7 @@ function pitchView() {
       </form>
     </div></section>
     <footer class="p-foot"><div class="wrap ft">
-      <div>${logo24('sm', true)}<p>24AGÁ · Seu negócio nunca para. As clínicas, pessoas e conversas da demonstração são fictícias.</p><p class="p-legal"><a href="privacidade.html">Política de Privacidade</a> · <a href="termos.html">Termos de Uso</a> · <a href="https://wa.me/5566999087424" target="_blank" rel="noopener">Contato</a><br>ROITY BUSINESS SOLUTIONS LTDA · CNPJ 53.472.596/0001-99 · Juara, MT</p></div>
+      <div>${logo24('sm', true)}<p>24AGÁ · Seu negócio nunca para. As clínicas, pessoas e conversas da demonstração são fictícias.</p><p class="p-legal" style="margin-bottom:8px"><a href="/blog/">Blog</a> · <a href="/ferramentas/">Ferramentas grátis</a> · <a href="/precos/">Preços</a> · <a href="/odontologia/">Dentistas</a> · <a href="/estetica/">Estética</a> · <a href="/medicos/">Médicos</a> · <a href="/salao/">Salões</a> · <a href="/barbearia/">Barbearias</a> · <a href="/advocacia/">Advocacia</a> · <a href="/contabilidade/">Contabilidade</a> · <a href="/imobiliaria/">Imobiliárias</a> · <a href="/petshop/">Pet shops</a> · <a href="/business/">Empresas</a> · <a href="/food/">Restaurantes</a></p><p class="p-legal"><a href="privacidade.html">Política de Privacidade</a> · <a href="termos.html">Termos de Uso</a> · <a href="https://wa.me/5566999087424" target="_blank" rel="noopener">Contato</a><br>ROITY BUSINESS SOLUTIONS LTDA · CNPJ 53.472.596/0001-99 · Juara, MT</p></div>
     </div></footer>
   </div>`;
 }
