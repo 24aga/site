@@ -4,7 +4,7 @@ h1: Marketing para dentistas: 10 ideias práticas
 intro: Do Google ao retorno do paciente, ações simples que enchem a agenda.
 cat: clinicas
 seg: odonto
-date: 2026-11-14
+date: 2026-11-13
 tldr: Perfil da Empresa no Google completo, avaliações, conteúdo educativo, programa de indicação, retorno de limpeza a cada 6 meses e resposta rápida no WhatsApp. Sempre seguindo as normas do CFO para publicidade.
 related: como-aumentar-agendamentos-no-consultorio-odontologico,como-pedir-avaliacao-no-google,como-aparecer-no-google-e-nas-ias
 pages: /odontologia/|Atendente com IA para dentistas

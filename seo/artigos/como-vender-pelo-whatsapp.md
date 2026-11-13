@@ -4,7 +4,7 @@ h1: Como vender pelo WhatsApp
 intro: O WhatsApp é o balcão da loja. Veja como transformar conversa em venda.
 cat: lojas
 seg: loja
-date: 2026-11-14
+date: 2026-11-13
 tldr: Responda rápido, mande foto e preço na primeira resposta, tire a dúvida que trava a compra, facilite o pagamento com Pix na conversa e faça pós-venda para gerar recompra.
 related: catalogo-no-whatsapp-como-montar,carrinho-abandonado-no-whatsapp-mensagens,como-responder-preco-no-whatsapp
 pages: /business/|Atendente com IA para empresas e lojas

@@ -4,7 +4,7 @@ h1: O que colocar no cardápio digital
 intro: Um cardápio bem montado responde dúvidas e aumenta o valor do pedido.
 cat: restaurantes
 seg: food
-date: 2026-11-14
+date: 2026-11-13
 tldr: Poucas categorias claras, nomes apetitosos, descrição com ingredientes e tamanho, foto real, adicionais organizados, combos em destaque e itens esgotados marcados na hora.
 related: como-aumentar-as-vendas-do-delivery,como-receber-pedidos-pelo-whatsapp-sem-erro,cardapio-digital-gratis-sem-comissao
 pages: /food/|24AGÁ Food · cardápio grátis

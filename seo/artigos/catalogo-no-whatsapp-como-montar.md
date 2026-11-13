@@ -4,7 +4,7 @@ h1: Catálogo no WhatsApp: como montar
 intro: Um bom catálogo responde metade das perguntas antes de o cliente fazê-las.
 cat: lojas
 seg: loja
-date: 2026-11-14
+date: 2026-11-13
 tldr: Fotos claras com fundo limpo, nome que o cliente usa na busca, preço visível, descrição com medidas e diferenciais, categorias simples e um link que você manda em qualquer conversa.
 related: como-vender-pelo-whatsapp,carrinho-abandonado-no-whatsapp-mensagens,como-medir-resultado-do-atendimento-no-whatsapp
 pages: /business/|Atendente com IA para lojas

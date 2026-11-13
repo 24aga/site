@@ -4,7 +4,7 @@ h1: Como captar imóveis para vender e alugar
 intro: Sem imóvel bom na carteira, não há lead que resolva. Veja como atrair proprietários.
 cat: imobiliarias
 seg: imobiliaria
-date: 2026-11-14
+date: 2026-11-13
 tldr: Ofereça avaliação gratuita, peça indicações a clientes e síndicos, anuncie "quer vender seu imóvel?" na sua região e responda proprietários na hora, marcando a visita do corretor.
 related: perguntas-para-qualificar-lead-imobiliario,como-responder-leads-de-imobiliaria,como-agendar-visitas-de-imoveis-sem-faltas
 pages: /imobiliaria/|Atendente com IA para imobiliárias

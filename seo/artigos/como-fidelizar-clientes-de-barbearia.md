@@ -4,7 +4,7 @@ h1: Como fidelizar clientes de barbearia
 intro: Cliente de barbearia é de rotina. Quem lembra dele primeiro fica com ele.
 cat: saloes
 seg: salao
-date: 2026-11-14
+date: 2026-11-13
 tldr: Registre o barbeiro e o corte preferido, avise quando passar do tempo de retorno, ofereça um clube de assinatura e facilite o agendamento pelo WhatsApp.
 related: como-divulgar-salao-de-beleza,mensagens-para-clientes-de-salao-modelos,agenda-de-salao-e-barbearia-pelo-whatsapp
 pages: /barbearia/|Atendente com IA para barbearias

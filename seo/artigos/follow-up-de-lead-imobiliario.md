@@ -4,7 +4,7 @@ h1: Follow-up de lead imobiliário
 intro: O lead que sumiu ainda quer um imóvel. Volte com algo útil.
 cat: imobiliarias
 seg: imobiliaria
-date: 2026-11-14
+date: 2026-11-13
 tldr: Retome com novidade concreta: imóvel novo no perfil, baixa de preço ou horário de visita. Nunca só "e aí, ainda tem interesse?".
 related: perguntas-para-qualificar-lead-imobiliario,modelos-de-follow-up-no-whatsapp,como-responder-leads-de-imobiliaria
 pages: /imobiliaria/|Atendente com IA para imobiliárias

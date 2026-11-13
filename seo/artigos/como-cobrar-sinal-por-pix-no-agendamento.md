@@ -3,7 +3,7 @@ desc: Quando e como cobrar sinal ou taxa de reserva por Pix em clínicas, salõe
 h1: Como cobrar sinal por Pix no agendamento
 intro: Um pequeno sinal diminui faltas em horários longos e procedimentos caros.
 cat: whatsapp
-date: 2026-11-14
+date: 2026-11-13
 tldr: Cobre sinal em horários longos ou de alto valor, informe antes de reservar, abata do valor final e deixe clara a política de remarcação e devolução.
 related: como-reduzir-faltas-na-clinica,politica-de-cancelamento-modelo,mensagem-de-confirmacao-de-consulta-modelos
 ---

@@ -4,7 +4,7 @@ h1: Como fidelizar clientes de pet shop
 intro: O tutor volta onde o pet é bem tratado e onde é fácil marcar.
 cat: petshops
 seg: petshop
-date: 2026-11-14
+date: 2026-11-13
 tldr: Tenha a ficha de cada pet, lembre do próximo banho e da vacina, ofereça pacotes mensais e leva e traz, mande foto do pet pronto e facilite o agendamento pelo WhatsApp.
 related: mensagens-para-pet-shop-modelos,agendamento-de-banho-e-tosa-pelo-whatsapp,como-pedir-avaliacao-no-google
 pages: /petshop/|Atendente com IA para pet shops

@@ -3,7 +3,7 @@ desc: Modelo de política de cancelamento e remarcação para clínicas, consult
 h1: Política de cancelamento: modelo pronto
 intro: Regras claras evitam conflito e reduzem faltas. Adapte o modelo ao seu negócio.
 cat: whatsapp
-date: 2026-11-14
+date: 2026-11-13
 tldr: Defina prazo para desmarcar sem custo, tolerância de atraso, o que acontece em faltas e como funciona o sinal. Comunique antes do agendamento, de forma gentil.
 related: como-cobrar-sinal-por-pix-no-agendamento,como-reduzir-faltas-na-clinica,mensagem-de-confirmacao-de-consulta-modelos
 ---

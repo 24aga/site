@@ -4,7 +4,7 @@ h1: Como aumentar as vendas do delivery
 intro: Mais pedidos e pedidos maiores, sem depender só do aplicativo.
 cat: restaurantes
 seg: food
-date: 2026-11-14
+date: 2026-11-13
 tldr: Cardápio digital com boas fotos, combos, sugestão de bebida ou sobremesa no carrinho, promoções em dias fracos, tempo de entrega realista, avaliações e resposta rápida.
 related: como-levar-clientes-do-aplicativo-para-o-seu-delivery,cupom-de-desconto-para-delivery,o-que-colocar-no-cardapio-digital
 pages: /food/|24AGÁ Food · cardápio grátis

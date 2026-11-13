@@ -3,7 +3,7 @@ desc: Entenda o que é um agente de inteligência artificial para WhatsApp, como
 h1: O que é agente de IA para WhatsApp?
 intro: Explicado de forma simples, para quem tem um negócio e quer entender se vale a pena.
 cat: ia
-date: 2026-11-14
+date: 2026-11-13
 tldr: Um agente de IA para WhatsApp é um atendente virtual que entende o que o cliente escreve ou fala, responde com as informações do seu negócio e executa tarefas como agendar, mandar Pix e chamar a equipe.
 related: chatbot-ou-atendente-ia-no-whatsapp,como-escolher-atendente-ia-whatsapp,como-treinar-a-ia-para-responder-como-sua-empresa
 pages: /comparativo/chatbot-ou-atendente-ia/|Chatbot ou atendente com IA

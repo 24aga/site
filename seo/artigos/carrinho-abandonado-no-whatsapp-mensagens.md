@@ -4,7 +4,7 @@ h1: Carrinho abandonado no WhatsApp
 intro: O cliente quase comprou. Uma mensagem no momento certo traz parte dele de volta.
 cat: lojas
 seg: loja
-date: 2026-11-14
+date: 2026-11-13
 tldr: Retome em 1 hora com ajuda, em 1 dia com a dúvida mais comum (frete, tamanho, pagamento) e em 3 dias com um incentivo pequeno e prazo curto. Pare quando o cliente responder.
 related: modelos-de-follow-up-no-whatsapp,como-vender-pelo-whatsapp,catalogo-no-whatsapp-como-montar
 pages: /business/|Atendente com IA para lojas

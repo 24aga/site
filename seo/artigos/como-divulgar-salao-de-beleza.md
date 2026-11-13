@@ -4,7 +4,7 @@ h1: Como divulgar salão de beleza
 intro: Ideias simples, de baixo custo, para encher a agenda, inclusive nos dias fracos.
 cat: saloes
 seg: salao
-date: 2026-11-14
+date: 2026-11-13
 tldr: Perfil no Google com fotos e avaliações, antes e depois no Instagram, indicação com benefício, promoções para dias fracos, parcerias locais e resposta rápida no WhatsApp.
 related: mensagens-para-clientes-de-salao-modelos,agenda-de-salao-e-barbearia-pelo-whatsapp,como-fidelizar-clientes-de-barbearia
 pages: /salao/|Atendente com IA para salões

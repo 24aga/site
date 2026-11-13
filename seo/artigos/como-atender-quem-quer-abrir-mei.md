@@ -4,7 +4,7 @@ h1: Como atender quem quer abrir MEI ou empresa
 intro: Um dos pedidos mais comuns no WhatsApp do contador, e uma porta de entrada para clientes mensais.
 cat: escritorios
 seg: escritorio
-date: 2026-11-14
+date: 2026-11-13
 tldr: Entenda a atividade e o porte, explique as opções em linguagem simples sem dar parecer pelo WhatsApp, marque uma conversa curta e envie a proposta com o que está incluso.
 related: como-captar-clientes-para-escritorio-de-contabilidade,follow-up-de-proposta-de-honorarios,mensagem-automatica-no-whatsapp-modelos
 pages: /contabilidade/|Atendente com IA para contabilidade

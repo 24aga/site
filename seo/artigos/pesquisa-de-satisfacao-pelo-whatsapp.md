@@ -3,7 +3,7 @@ desc: Como fazer pesquisa de satisfação (NPS) pelo WhatsApp depois do atendime
 h1: Pesquisa de satisfação pelo WhatsApp
 intro: Uma pergunta, no momento certo, mostra o que melhorar e quem vai te indicar.
 cat: whatsapp
-date: 2026-11-14
+date: 2026-11-13
 tldr: Envie no dia do atendimento uma pergunta de 0 a 10, peça um comentário curto, trate na hora quem deu nota baixa e convide quem deu nota alta para avaliar no Google.
 related: como-pedir-avaliacao-no-google,modelos-de-follow-up-no-whatsapp,como-medir-resultado-do-atendimento-no-whatsapp
 ---

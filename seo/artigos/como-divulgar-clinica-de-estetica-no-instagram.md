@@ -4,7 +4,7 @@ h1: Como divulgar clínica de estética no Instagram
 intro: Conteúdo que gera confiança e um caminho claro até o agendamento.
 cat: clinicas
 seg: estetica
-date: 2026-11-14
+date: 2026-11-13
 tldr: Poste conteúdo que educa e mostra bastidores, use depoimentos com autorização, respeite as regras do seu conselho profissional, tenha um link de WhatsApp na bio e responda rápido quem chega.
 related: como-converter-leads-do-instagram-em-clinica-de-estetica,como-pedir-avaliacao-no-google,como-responder-preco-no-whatsapp
 pages: /estetica/|Atendente com IA para estética

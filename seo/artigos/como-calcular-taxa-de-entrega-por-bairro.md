@@ -4,7 +4,7 @@ h1: Como calcular a taxa de entrega por bairro
 intro: Taxa justa para o cliente e que não come o seu lucro.
 cat: restaurantes
 seg: food
-date: 2026-11-14
+date: 2026-11-13
 tldr: Some o custo por entrega (entregador, combustível, tempo), divida a cidade em zonas por distância, defina uma taxa por zona, um pedido mínimo e frete grátis acima de um valor que cubra o custo.
 related: como-receber-pedidos-pelo-whatsapp-sem-erro,como-aumentar-as-vendas-do-delivery,cupom-de-desconto-para-delivery
 pages: /food/|24AGÁ Food · cardápio grátis
