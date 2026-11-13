@@ -111,7 +111,7 @@ document.addEventListener('click',function(e){{var a=e.target.closest('a[href*="
 ORG = {"@context": "https://schema.org", "@type": "Organization", "name": "24AGÁ", "url": SITE, "logo": SITE + "/icon-512.png",
        "legalName": "ROITY BUSINESS SOLUTIONS LTDA", "taxID": "53.472.596/0001-99",
        "contactPoint": {"@type": "ContactPoint", "telephone": "+55-66-99908-7424", "contactType": "sales", "availableLanguage": "Portuguese"},
-       "sameAs": ["https://www.instagram.com/24aga.app/"]}
+       "sameAs": ["https://www.instagram.com/24aga.app/", "https://www.facebook.com/profile.php?id=61596516661834"]}
 
 def faq_ld(faq):
     return {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}
